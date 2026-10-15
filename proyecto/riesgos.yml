@@ -44,3 +44,25 @@ riesgos:
     disparador: Una etapa de cualquiera de los tres vence con tareas abiertas
     responsable: Carlos
     estado: abierto
+
+  - id: R-05
+    riesgo: La Firma Digital Remota y el token no se pueden usar desde el producto; el firmante tiene que bajar el PDF, firmarlo afuera y subirlo, y eso puede trabarlo
+    probabilidad: 4
+    impacto: 3
+    respuesta: mitigar
+    plan: "La pantalla guía paso a paso y el producto verifica el PDF que vuelve (ADR-002); se ofrece la firma electrónica como alternativa"
+    contingencia: Medir cuántos abandonan en ese paso y simplificar la guía
+    disparador: Más de uno de cada cinco firmantes con firma digital no termina
+    responsable: Carlos
+    estado: abierto
+
+  - id: R-06
+    riesgo: Los costos de mensajes, validación de identidad y alojamiento crecen sin ingresos, porque por ahora nadie paga
+    probabilidad: 3
+    impacto: 3
+    respuesta: aceptar
+    plan: "Elegir los proveedores más baratos (ADR-005 y ADR-006) y mirar el gasto cada mes"
+    contingencia: Limitar el SMS y la validación contra RENAPER, que son lo más caro
+    disparador: El gasto mensual supera lo que Carlos fije
+    responsable: Carlos
+    estado: abierto

@@ -8,8 +8,12 @@ Formato: `ADR-NNN-titulo-en-kebab-case.md`, con contexto, opciones consideradas 
 la que parecía buena y no lo era), decisión, consecuencias positivas, negativas y lo que
 no cambia, cuándo revisarla y referencias.
 
-Todavía no hay ninguno: los primeros salen del paso 3 de la primera capacidad (stack,
-alojamiento, proveedor de firma, verificación de identidad y compuertas de calidad).
 
 | N.º | Título | Estado | Fecha |
 |---|---|---|---|
+| 001 | [Stack de la aplicación](ADR-001-stack.md) | Aceptado | 2026-10-15 |
+| 002 | [Cómo se firma el PDF](ADR-002-firma-del-pdf.md) | Aceptado | 2026-10-15 |
+| 003 | [Conversión de Word a PDF](ADR-003-conversion-de-word.md) | Aceptado | 2026-10-15 |
+| 004 | [Pruebas y compuertas de calidad](ADR-004-compuertas-de-calidad.md) | Aceptado | 2026-10-15 |
+| 005 | Alojamiento y datos personales | Propuesto, espera a Carlos | 2026-10-15 |
+| 006 | Mensajería, identidad y certificado de aplicación | Propuesto, espera a Carlos | 2026-10-15 |

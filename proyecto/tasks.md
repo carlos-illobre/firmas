@@ -23,7 +23,7 @@ terminarla se marca `[x]`; no se borra.
 - [x] T004 [carlos] [alta] Aprobar la especificación de la primera capacidad (depende de T003)
 - [x] T005 [agente] Maquetas de la primera capacidad: paso 2, con /ux (depende de T004)
 - [x] T006 [carlos] Elegir y aprobar las maquetas (depende de T005)
-- [ ] T007 [agente] Arquitectura: stack, alojamiento y proveedores de firma e identidad, con un ADR cada uno (depende de T004)
+- [ ] T007 [agente] [en curso] Arquitectura: stack, alojamiento y proveedores de firma e identidad, con un ADR cada uno (depende de T004)
 - [ ] T008 [carlos] Crear el entorno de la nube `firmas` (depende de T007)
   Cómo, en docs/operacion/sesiones-en-la-nube.md. Hace falta recién cuando haya código.
 - [x] T009 [agente] Las sesiones en la nube suben a main sin preguntar por su rama
@@ -38,3 +38,5 @@ terminarla se marca `[x]`; no se borra.
   Para verificar la ley 25.506 y las demás antes de aprobar la 001: infoleg.gob.ar o
   argentina.gob.ar.
 - [x] T014 [agente] La compuerta no pide tarea para tmp/, la carpeta descartable
+- [ ] T015 [carlos] [alta] Decidir alojamiento y proveedores con costo: ADR-005 y ADR-006 (depende de T007)
+- [ ] T016 [carlos] Cotizar la validación contra RENAPER y el certificado de aplicación licenciado (depende de T015)
