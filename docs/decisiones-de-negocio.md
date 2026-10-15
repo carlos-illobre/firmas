@@ -93,3 +93,7 @@ Lo que todavía no está decidido está en
     guardan mientras exista la cuenta, se entra con correo y contraseña con un segundo factor
     opcional, las plantillas son de todo el estudio y «demorado» es lo que vence en tres días
     sin completarse. Los roles se llaman solicitante y firmante.
+40. **Maqueta de la pantalla del firmante.** La variante B: el documento a la izquierda y un
+    panel de firma a la derecha, con lo que ya hizo, lo que le falta y la elección entre
+    firma digital y electrónica; en el celular, el panel es una hoja plegable abajo. Las
+    demás pantallas siguen ese estilo.

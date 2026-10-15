@@ -1,5 +1,5 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Firmante — variante A</title><style>/* Tokens del sistema visual (docs/sistema-visual.md), leídos de la maqueta de Lovable. */
+<title>Firmante: firmar el documento</title><style>/* Tokens del sistema visual (docs/sistema-visual.md), leídos de la maqueta de Lovable. */
 :root{--fondo:oklch(98.2% .004 95);--texto:oklch(21% .03 264);--tarjeta:#fff;--primario:oklch(52% .13 256);--sobre-primario:oklch(98.5% .005 250);--marino:oklch(24% .055 268);--sobre-marino:oklch(96% .01 250);--apagado:oklch(95.5% .008 250);--texto-apagado:oklch(52% .03 260);--acento:oklch(94% .02 256);--texto-acento:oklch(35% .09 256);--borde:oklch(91.5% .01 255);--campo:oklch(90% .012 255);--peligro:oklch(55% .2 27);--exito:oklch(55% .12 155);--exito-suave:oklch(94% .04 155);--aviso:oklch(62% .12 70);--aviso-suave:oklch(95% .05 85);--info-suave:oklch(94% .025 256);--f1:oklch(52% .13 256);--f2:oklch(60% .14 330);--f3:oklch(60% .13 160);--radio:10px;--sombra:0 1px 3px rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1)}
 *{box-sizing:border-box;margin:0}
 body{font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:var(--fondo);color:var(--texto);font-size:14px;line-height:1.45}
@@ -37,23 +37,33 @@ button{font:inherit;cursor:pointer}
 @media (max-width:640px){.hoja{padding:28px 22px;font-size:13px}.firmas{grid-template-columns:1fr;gap:4px}}
 
 
-.cont{max-width:820px;margin:0 auto;padding:20px 20px 120px}
-.quien{display:flex;gap:12px;align-items:center;margin-bottom:14px}
-.quien small{display:block;color:var(--texto-apagado)}
-.quien strong{font-size:17px}
-.estado{display:flex;align-items:center;gap:12px;margin-bottom:18px;font-size:12px;color:var(--texto-apagado)}
-.estado .progreso{flex:1}
-.marco{background:oklch(93% .01 255);border-radius:12px;padding:24px}
-.abajo{position:fixed;left:0;right:0;bottom:0;background:var(--tarjeta);border-top:1px solid var(--borde);box-shadow:0 -4px 16px rgba(0,0,0,.05)}
-.abajo div{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:12px 20px}
-.abajo .primario{margin-left:auto;padding:11px 22px}
-@media (max-width:640px){.marco{padding:8px}.cont{padding:14px 12px 120px}.abajo .boton.texto{font-size:13px}}
+.grilla{display:grid;grid-template-columns:1fr 360px;gap:24px;max-width:1240px;margin:0 auto;padding:24px}
+.panel{position:sticky;top:24px;align-self:start;padding:20px;display:grid;gap:16px}
+.panel h3{font-size:16px}
+.pasos{list-style:none;padding:0;display:grid;gap:10px}
+.pasos li{display:flex;gap:10px;align-items:center}
+.pasos i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;background:var(--apagado);color:var(--texto-apagado);flex:none}
+.pasos .ok i{background:var(--exito-suave);color:var(--exito)}
+.pasos .ahora i{background:var(--primario);color:#fff}
+.opcion{border:1px solid var(--borde);border-radius:var(--radio);padding:12px;display:flex;gap:10px;align-items:flex-start}
+.opcion.elegida{border-color:var(--primario);box-shadow:0 0 0 3px var(--info-suave)}
+.opcion small{display:block;color:var(--texto-apagado);font-size:12px}
+.radio{width:16px;height:16px;border-radius:50%;border:2px solid var(--campo);margin-top:2px;flex:none}
+.elegida .radio{border:5px solid var(--primario)}
+.nota{font-size:12px;color:var(--texto-apagado);background:var(--apagado);border-radius:8px;padding:10px}
+.titulo{display:flex;gap:12px;align-items:center;margin-bottom:16px}
+.titulo small{display:block;color:var(--texto-apagado)}
+.acciones{display:flex;justify-content:space-between}
+.opciones{display:grid;gap:8px}
+@media (max-width:900px){.grilla{grid-template-columns:1fr;padding:12px 12px 230px}
+.panel{position:fixed;left:0;right:0;bottom:0;top:auto;border-radius:16px 16px 0 0;padding:14px 16px 16px;gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,.12)}
+.panel .pasos,.panel .nota,.panel .opciones{display:none}.asa{width:40px;height:4px;border-radius:4px;background:var(--campo);margin:0 auto}}
+@media (min-width:901px){.asa,.solo-cel{display:none}}
 </style></head><body>
 <header class="barra"><div class="marca"><i>✓</i>Firmas</div><span class="segura">🔒 Conexión segura</span></header>
-<main class="cont">
-<div class="quien"><div class="avatar">MG</div><div><small>María González, de Estudio Rivas &amp; Asociados, te pide que firmes</small><strong>Contrato de locación de servicios profesionales</strong></div></div>
-<div class="estado"><div class="progreso"><span style="width:50%"></span></div>1 de 2 campos completos</div>
-<div class="marco"><article class="hoja"><h2>CONTRATO DE LOCACIÓN DE SERVICIOS PROFESIONALES</h2>
+<div class="grilla">
+<section><div class="titulo"><div class="avatar">MG</div><div><small>María González, de Estudio Rivas &amp; Asociados, te pide que firmes</small><strong style="font-size:17px">Contrato de locación de servicios profesionales</strong></div></div>
+<article class="hoja"><h2>CONTRATO DE LOCACIÓN DE SERVICIOS PROFESIONALES</h2>
 <p>En la Ciudad Autónoma de Buenos Aires, a los 15 días del mes de octubre de 2026, entre <b>Estudio Rivas &amp; Asociados</b>, en adelante «el Estudio», y <b>Lucía Ramos</b>, DNI 30.123.456, en adelante «la Comitente», se celebra el presente contrato, sujeto a las siguientes cláusulas:</p>
 <p><b>PRIMERA — Objeto.</b> El Estudio prestará a la Comitente asesoramiento jurídico en materia comercial, incluida la revisión de contratos con proveedores y la representación en las negociaciones que la Comitente le encomiende.</p>
 <p><b>SEGUNDA — Honorarios.</b> La Comitente abonará al Estudio la suma mensual de pesos un millón ochocientos mil ($ 1.800.000), pagadera del 1 al 10 de cada mes.</p>
@@ -62,7 +72,17 @@ button{font:inherit;cursor:pointer}
 <div class="casilla hecha"><span>Firmó María González · 15/10/2026 10:23</span><b>María González</b></div>
 <div class="casilla actual" id="firma"><span>✎ Tu firma · obligatorio</span><b>Tocá para firmar</b></div>
 </div>
-<div class="casilla llena" style="max-width:240px"><span>Aclaración · completa</span><b>Lucía Ramos</b></div><div class="pie-hoja">Página 4 de 4</div></article></div>
-</main>
-<nav class="abajo"><div><button class="boton texto">Descargar</button><button class="boton texto peligro">Rechazar</button><button class="boton primario">Ir al próximo campo →</button></div></nav>
+<div class="casilla llena" style="max-width:240px"><span>Aclaración · completa</span><b>Lucía Ramos</b></div><div class="pie-hoja">Página 4 de 4</div></article></section>
+<aside class="panel tarjeta"><div class="asa"></div>
+<h3>Tu firma</h3>
+<ol class="pasos"><li class="ok"><i>✓</i>Identidad comprobada por código SMS</li><li class="ok"><i>✓</i>Leíste las 4 páginas</li><li class="ahora"><i>3</i>Completá tus 2 campos (falta 1)</li><li><i>4</i>Elegí cómo firmar</li></ol>
+<div class="progreso"><span style="width:75%"></span></div>
+<div class="opciones">
+<div class="opcion"><span class="radio"></span><div><b>Con mi certificado de firma digital</b><small>Archivo, token o Firma Digital Remota</small></div></div>
+<div class="opcion elegida"><span class="radio"></span><div><b>Con firma electrónica</b><small>Firmás apretando un botón</small></div></div></div>
+<p class="nota">La firma digital equivale a la de puño y letra. La electrónica vale como prueba; si alguien la desconoce, hay que probarla con la constancia que se genera al terminar.</p>
+<span class="solo-cel apagado" style="font-size:12px">3 de 4 · Falta completar 1 campo</span>
+<button class="boton primario">Completar el próximo campo</button>
+<div class="acciones"><button class="boton texto">Descargar</button><button class="boton texto peligro">Rechazar</button></div>
+</aside></div>
 </body></html>

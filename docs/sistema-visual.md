@@ -69,3 +69,25 @@ La maqueta de Lovable tiene Inicio, Documentos, el detalle de un documento y Nue
 documento, en cuatro pasos: documento, destinatarios, campos, y revisar y enviar. Plantillas,
 Contactos y clientes, Tareas y vencimientos, Informes y actividad, Configuración y la Vista
 del firmante dan 404 ahí: salen del diseño de Figma, con los estilos de arriba.
+
+## Lo que decidió la maqueta aprobada del firmante
+
+Carlos eligió la variante B el 2026-10-15 (decisión 40 de
+[decisiones-de-negocio.md](decisiones-de-negocio.md)).
+
+- **Panel de tarea.** Cuando alguien tiene que hacer algo con un documento (firmar, revisar),
+  el documento ocupa el centro y un panel a la derecha, de 360 px, dice qué hizo, qué le
+  falta y cuál es el próximo paso, con un solo botón principal. En el celular, el panel es
+  una hoja fija abajo con bordes redondeados de 16 px, plegada: muestra el progreso y el
+  botón principal.
+- **Lista de pasos.** Círculos de 22 px: verde suave con ✓ lo hecho, azul principal con el
+  número lo actual, apagado lo que falta.
+- **Opción elegible.** Tarjeta con borde; la elegida lleva el borde principal y un halo de
+  3 px en el azul suave.
+- **Campos en el documento.** Recuadro con borde punteado del color del firmante, fondo de
+  ese color al 8 %. El campo actual lleva un halo de 4 px; el completo, borde continuo; uno
+  firmado, verde suave con la firma escrita.
+- **Pantallas del firmante.** Sin barra lateral: barra superior azul marino con la marca y
+  «Conexión segura». El documento se ve como una hoja blanca con letra con serifa.
+- **Nota aclaratoria.** Texto de 12 px sobre fondo apagado con radio de 8 px, para explicar
+  algo legal en palabras simples.
