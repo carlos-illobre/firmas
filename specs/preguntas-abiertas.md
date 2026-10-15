@@ -39,8 +39,9 @@ firma con firma electrónica (decisión 5).
 
 ## Recorrido
 
-9. Además de adjuntar el archivo, ¿el producto ayuda a redactar el documento, con modelos?
-   ¿Qué formatos se aceptan: solo PDF, o también Word?
+9. ¿Qué formatos de archivo se aceptan al subir: solo PDF, o también Word? Decidido: además
+   de subir un archivo, se puede usar una plantilla o crear el documento desde cero
+   (decisión 11).
 10. ¿Hay orden de firma (uno después del otro) o todos firman a la vez?
 11. ¿Cómo le llega el pedido de firma a cada uno: correo, WhatsApp, un enlace?
 12. ¿Qué pasa si alguien rechaza firmar, o el pedido vence?

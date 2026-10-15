@@ -38,3 +38,6 @@ Lo que todavía no está decidido está en
     (<https://lovable.dev/preview/IH4hFkwJsosb9khZpHbXWAcIIZ8NlFs5>), por ingeniería
     inversa. Las pantallas que en esa maqueta dan 404 se completan con el diseño en Figma
     (<https://raid-score-17949864.figma.site>), pero con los estilos de la de Lovable.
+11. **Cómo se empieza un documento.** De tres formas, como en la maqueta de Lovable:
+    subiendo un archivo, usando una plantilla del estudio o creándolo desde cero en el
+    producto. Amplía la decisión 8 y responde la primera mitad de la pregunta 9.
