@@ -56,3 +56,56 @@ Decidido: por ahora nadie paga (decisión 6).
 
 Decidido: no hay fecha límite (decisión 9), y la primera versión tiene todas las pantallas de
 las maquetas (decisión 18).
+
+## Las normas
+
+Las fuentes oficiales no se pudieron consultar el 2026-10-15 (la red de la sesión no deja
+pasar infoleg.gob.ar, argentina.gob.ar, boletinoficial.gob.ar ni saij.gob.ar). Hasta
+verificarlas, las reglas jurídicas de las capacidades 001 y 004 quedan «a verificar».
+
+## 001 · Pedido de firma
+
+13. ¿Cuál es el tamaño y la cantidad de páginas máximas de un archivo?
+14. Además del correo, ¿qué otros canales hay para mandar el pedido: WhatsApp, SMS, copiar el
+    enlace?
+15. ¿Se pueden pedir dos formas de identidad al mismo firmante, por ejemplo, correo y código
+    por SMS?
+16. La maqueta muestra «Revisar y aprobar», «Solicitada revisión interna» y «Comentario
+    agregado». ¿Hay una revisión interna del estudio antes de enviar, y comentarios sobre el
+    documento?
+17. ¿Aprobás los supuestos de la especificación (sección «Assumptions»)? Tipos de campo,
+    nombre escrito como firma electrónica, recordatorios cada tres días, avisos al
+    remitente, enlace en vez de adjunto y sin delegar la firma.
+
+## 002 · Inicio y documentos
+
+18. En el detalle de un documento, ¿qué edita «Abrir editor»?
+19. ¿Todo documento tiene un cliente, o puede no tenerlo?
+20. ¿«Demorado» es lo que vence en los próximos tres días sin completarse, o otra cosa?
+
+## 003 · Plantillas
+
+21. ¿Quién puede crear y cambiar plantillas: cualquier miembro del estudio o solo el
+    administrador?
+22. ¿El producto trae modelos propios, o cada estudio carga los suyos?
+
+## 004 · Contactos
+
+23. Además de nombre, correo y teléfono, ¿qué datos se guardan: DNI, CUIT, domicilio?
+
+## 005 · Tareas
+
+24. La maqueta muestra «Contrato de locación vence en 7 días — Renovación no iniciada». ¿Un
+    documento tiene fechas propias del contrato (vencimiento, renovación), distintas del
+    vencimiento del pedido? ¿El producto crea tareas solo con esas fechas?
+
+## 006 · Actividad
+
+25. ¿En qué formato se exporta el registro: PDF, planilla, los dos?
+
+## 007 · Configuración
+
+26. ¿Qué roles hay en un estudio y qué puede hacer cada uno?
+27. ¿Cómo se ingresa: correo y contraseña, con Google, con un segundo factor?
+28. ¿Con qué herramientas se integra al principio, si con alguna?
+29. ¿Cualquiera puede crear una cuenta, o se entra por invitación?
