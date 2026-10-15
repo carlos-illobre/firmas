@@ -16,7 +16,10 @@ const RAIZ = fileURLToPath(new URL('..', import.meta.url));
 // Lo que no es código: se edita sin tarea empezada. Todo lo demás es código. Se define por
 // la negativa porque la arquitectura todavía no está decidida (la eligen los ADR del paso 3).
 const DOCUMENTACION = ['specs/', 'docs/', 'proyecto/', '.specify/', '.claude/', '.github/', 'tests/compuerta.mjs', 'tests/trazabilidad.mjs', 'README.md', 'CLAUDE.md', '.gitignore', '.gitattributes'];
-const esCodigo = (ruta) => !ruta.startsWith('..') && !DOCUMENTACION.some((d) => ruta === d || ruta.startsWith(d));
+// tmp/ no se versiona y se limpia al terminar: lo que se escribe ahí (scripts para sacar
+// capturas, armar maquetas) no es código de la aplicación y no necesita tarea.
+const DESCARTABLE = ['tmp/'];
+const esCodigo = (ruta) => !ruta.startsWith('..') && ![...DOCUMENTACION, ...DESCARTABLE].some((d) => ruta === d || ruta.startsWith(d));
 const SIN_DOCUMENTACION = DOCUMENTACION.map((d) => `:!${d}`);
 const EN_CURSO = join(RAIZ, '.specify', 'en-curso.json');
 const TIPOS = ['arreglo', 'ajuste', 'interfaz', 'regla'];

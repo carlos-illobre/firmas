@@ -37,3 +37,4 @@ terminarla se marca `[x]`; no se borra.
 - [x] T013 [carlos] [alta] Habilitar una fuente oficial de normas en el entorno (estimación 15m)
   Para verificar la ley 25.506 y las demás antes de aprobar la 001: infoleg.gob.ar o
   argentina.gob.ar.
+- [x] T014 [agente] La compuerta no pide tarea para tmp/, la carpeta descartable
