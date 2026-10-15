@@ -33,6 +33,11 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 | RF-23 | Qué dice la constancia |
 | RF-24 | Registro de eventos que no se puede borrar |
 | RF-25 | Huella del documento firmado |
+| RF-26 | Firma digital válida: certificado vigente, verificable y de certificador licenciado |
+| RF-27 | La firma digital equivale a la de puño y letra y presume autoría e integridad |
+| RF-28 | La firma electrónica se prueba si se la desconoce: la constancia junta esa prueba |
+| RF-29 | El remitente ve qué vale cada firma |
+| RF-30 | La firma remota es firma digital, con posibles aranceles |
 | RNF-01 | Celular y computadora |
 | RNF-02 | Solo ven el documento quienes corresponde |
 | RNF-03 | Enlace imposible de adivinar, que vence con el pedido |
@@ -43,7 +48,8 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 - El firmante no necesita cuenta y firma desde el mensaje.
 - Quien envía decide todo por firmante: orden, canal y forma de identidad.
 - Rechazo o vencimiento cancelan el pedido; no se retoma, se reenvía uno nuevo.
-- Las reglas sobre el valor de cada firma esperan su norma verificada.
+- Cada regla jurídica cita su norma (ley 25.506, Código Civil y Comercial, decreto
+  182/2019); los contratos que exigen escritura pública no se otorgan con el producto.
 
 ## Decisiones de Carlos
 
@@ -51,5 +57,4 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 
 ## Lo que frena la aprobación
 
-- Verificar las normas de «Reglas jurídicas a verificar».
 - Las preguntas de esta capacidad en [preguntas-abiertas.md](../preguntas-abiertas.md).

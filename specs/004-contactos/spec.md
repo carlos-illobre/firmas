@@ -46,16 +46,18 @@ pedido y ver el documento asociado.
 
 ### Functional Requirements
 
-- **RF-41**: Hay contactos de dos clases: personas y organizaciones. Una persona puede
+- **RF-46**: Hay contactos de dos clases: personas y organizaciones. Una persona puede
   pertenecer a una organización.
-- **RF-42**: De una persona se guarda nombre y apellido, correo y teléfono; de una
+- **RF-47**: De una persona se guarda nombre y apellido, correo y teléfono; de una
   organización, su nombre.
-- **RF-43**: La lista de contactos muestra, de cada uno, cuántos documentos tiene asociados y
+- **RF-48**: La lista de contactos muestra, de cada uno, cuántos documentos tiene asociados y
   cuántos pedidos o revisiones están pendientes, y se filtra.
-- **RF-44**: Al cargar destinatarios en un pedido se sugieren los contactos guardados.
-- **RF-45**: Los contactos se crean, editan y borran.
-- **RNF-07**: Los datos de los contactos son datos personales y se tratan como tales; su
-  norma (ley 25.326) está a verificar, como las de la capacidad 001.
+- **RF-49**: Al cargar destinatarios en un pedido se sugieren los contactos guardados.
+- **RF-50**: Los contactos se crean, editan y borran.
+- **RNF-07**: Los datos de los contactos son datos personales: se guardan solo los
+  necesarios, ciertos y pertinentes, y con medidas que eviten que se adulteren, se pierdan o
+  los vea quien no corresponde. *Ley 25.326, arts. 4 y 9, verificada el 2026-10-15 en
+  argentina.gob.ar.*
 
 ### Key Entities *(include if feature involves data)*
 

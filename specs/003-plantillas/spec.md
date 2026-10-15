@@ -84,14 +84,14 @@ que el PDF que se firma tiene ese texto.
 
 ### Functional Requirements
 
-- **RF-36**: Hay plantillas del estudio, con nombre, categoría, texto, datos variables y,
+- **RF-41**: Hay plantillas del estudio, con nombre, categoría, texto, datos variables y,
   opcionalmente, campos de firma por rol de firmante.
-- **RF-37**: Usar una plantilla pide completar sus datos variables y arma el documento del
+- **RF-42**: Usar una plantilla pide completar sus datos variables y arma el documento del
   pedido sin cambiar la plantilla.
-- **RF-38**: Las plantillas se listan con su categoría, cuándo y quién la usó por última vez;
+- **RF-43**: Las plantillas se listan con su categoría, cuándo y quién la usó por última vez;
   se filtran por categoría y se marcan como favoritas.
-- **RF-39**: Se pueden crear, editar y borrar plantillas.
-- **RF-40**: Se puede redactar un documento desde cero en el producto, con formato básico
+- **RF-44**: Se pueden crear, editar y borrar plantillas.
+- **RF-45**: Se puede redactar un documento desde cero en el producto, con formato básico
   (títulos, negrita, listas), que se convierte a PDF para firmar.
 - **RNF-06**: Usar una plantilla funciona en el celular y en la computadora.
 

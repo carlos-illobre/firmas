@@ -271,23 +271,39 @@ la huella coincide con el documento firmado.
 - **RNF-04**: Los textos que ve el firmante están en castellano, con voseo, y no suponen que
   sabe de derecho.
 
-### Reglas jurídicas a verificar
+### Reglas jurídicas
 
-Lo que sigue son decisiones de Carlos que necesitan su norma citada antes de ser reglas
-(constitución, principio II). Las fuentes oficiales (infoleg.gob.ar, argentina.gob.ar,
-boletinoficial.gob.ar, saij.gob.ar) no se pudieron consultar desde la sesión del 2026-10-15.
+Verificadas el 2026-10-15 en argentina.gob.ar: la ley 25.506 en su texto actualizado, el
+Código Civil y Comercial (ley 26.994) en su texto original y el decreto 182/2019.
 
-- La firma digital, con un certificado de un certificador licenciado, equivale a la firma
-  de puño y letra: ley 25.506, arts. 2 y 3, y Código Civil y Comercial, art. 288. **A
-  verificar.**
-- La firma electrónica vale como prueba, pero si se la desconoce, quien la invoca tiene que
-  probar que es válida: ley 25.506, art. 5. **A verificar.**
-- La Plataforma de Firma Digital Remota y los certificados que emite: decreto 182/2019 y
-  sus normas complementarias. **A verificar.**
-- Qué tiene que tener la constancia para servir de prueba en un juicio, y cuánto tiempo se
-  guarda: sin norma identificada; es una pregunta abierta.
-- [NEEDS CLARIFICATION: verificar en las fuentes oficiales las normas de esta sección antes
-  de aprobar la especificación]
+- **RF-26**: Una firma hecha con certificado vale como firma digital solo si el certificado
+  estaba vigente al firmar, la firma se verifica con los datos del certificado y el
+  certificado lo emitió un certificador licenciado. Si falla alguna de las tres, el producto
+  no la presenta como firma digital. *Ley 25.506, arts. 9, 14 y 15.*
+- **RF-27**: Una firma digital válida satisface la exigencia de firma de puño y letra, y se
+  presume, salvo prueba en contrario, que es del titular del certificado y que el documento
+  no cambió desde que se firmó. *Ley 25.506, arts. 3, 7 y 8; Código Civil y Comercial,
+  art. 288.*
+- **RF-28**: La firma electrónica es la que no reúne los requisitos de la firma digital. Si
+  quien firmó la desconoce, quien la invoca tiene que probar que es válida; por eso la
+  constancia junta la prueba de quién firmó y de que el documento no cambió. *Ley 25.506,
+  art. 5; Código Civil y Comercial, arts. 314 y 319, que dejan al juez ponderar la
+  confiabilidad de los soportes y de los procedimientos técnicos.*
+- **RF-29**: El producto le dice al remitente, en palabras simples, qué vale cada firma: la
+  digital equivale a la de puño y letra; la electrónica vale como prueba, que hay que
+  sostener si se la desconoce. *Ley 25.506, arts. 3 y 5.*
+- **RF-30**: La firma digital remota es una firma digital: el certificado lo guarda la
+  Plataforma de Firma Digital Remota, creada por el decreto 892/2017, y su uso puede tener
+  aranceles. *Decreto 182/2019, considerandos y art. 25 de su anexo.*
+
+La ley 25.506 ya no excluye ningún acto (su art. 4 fue derogado por la ley 27.446), pero los
+contratos que la ley obliga a hacer por escritura pública, como los de derechos reales sobre
+inmuebles, no se pueden otorgar con este producto. *Código Civil y Comercial, arts. 285, 299
+y 1017.* Qué hace el producto con ellos es una pregunta abierta.
+
+Qué tiene que tener la constancia más allá de lo anterior, y cuánto tiempo se guarda, no
+tiene una norma identificada: es una pregunta abierta.
+
 - [NEEDS CLARIFICATION: las preguntas de «001 · Pedido de firma» en
   [preguntas-abiertas.md](../preguntas-abiertas.md)]
 

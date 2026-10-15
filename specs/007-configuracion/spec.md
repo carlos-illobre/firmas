@@ -80,17 +80,17 @@ nuevo los trae.
 
 ### Functional Requirements
 
-- **RF-53**: Un abogado se registra con nombre, correo y contraseña, crea su estudio,
+- **RF-58**: Un abogado se registra con nombre, correo y contraseña, crea su estudio,
   confirma su correo, entra y sale, y recupera la contraseña.
-- **RF-54**: El administrador invita colaboradores por correo, les asigna un rol, se lo
+- **RF-59**: El administrador invita colaboradores por correo, les asigna un rol, se lo
   cambia y les quita el acceso.
-- **RF-55**: La seguridad y autenticación del estudio se configura: métodos de acceso y
+- **RF-60**: La seguridad y autenticación del estudio se configura: métodos de acceso y
   políticas.
-- **RF-56**: Cada usuario elige qué avisos recibe.
-- **RF-57**: El estudio fija las preferencias de los documentos: formato de fecha,
+- **RF-61**: Cada usuario elige qué avisos recibe.
+- **RF-62**: El estudio fija las preferencias de los documentos: formato de fecha,
   recordatorios y vencimiento predeterminados, y forma de firma predeterminada.
-- **RF-58**: El estudio guarda sus datos: nombre, logo e información de contacto.
-- **RF-59**: El estudio conecta integraciones con herramientas propias.
+- **RF-63**: El estudio guarda sus datos: nombre, logo e información de contacto.
+- **RF-64**: El estudio conecta integraciones con herramientas propias.
 - **RNF-10**: Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se
   limitan.
 

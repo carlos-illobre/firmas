@@ -6,9 +6,9 @@ Todos los eventos del estudio, filtrables y exportables. Detalle en [spec.md](sp
 
 | ID | En una línea |
 |---|---|
-| RF-50 | El historial muestra los eventos de la capacidad 001 y los del estudio (descargas, cambios… |
-| RF-51 | Se filtra por período, por participante y por acción |
-| RF-52 | Se exporta lo filtrado |
+| RF-55 | El historial muestra los eventos de la capacidad 001 y los del estudio (descargas, cambios… |
+| RF-56 | Se filtra por período, por participante y por acción |
+| RF-57 | Se exporta lo filtrado |
 | RNF-09 | Nadie puede borrar ni cambiar un evento, tampoco un administrador |
 
 ## Lo que más pesa

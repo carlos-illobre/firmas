@@ -46,12 +46,12 @@ las asigna a sí mismo o a otro miembro del estudio, y las ve en lista o en cale
 
 ### Functional Requirements
 
-- **RF-46**: Una tarea tiene título, fecha, tipo (revisión, seguimiento, vencimiento),
+- **RF-51**: Una tarea tiene título, fecha, tipo (revisión, seguimiento, vencimiento),
   prioridad, responsable y, opcionalmente, un documento y un cliente vinculados.
-- **RF-47**: Las tareas se ven en lista o en calendario, y se filtran en mis tareas,
+- **RF-52**: Las tareas se ven en lista o en calendario, y se filtran en mis tareas,
   asignadas por mí y de hoy.
-- **RF-48**: Las tareas se crean, editan, completan y borran.
-- **RF-49**: El menú muestra cuántas tareas pendientes tiene el abogado.
+- **RF-53**: Las tareas se crean, editan, completan y borran.
+- **RF-54**: El menú muestra cuántas tareas pendientes tiene el abogado.
 - **RNF-08**: Las tareas se usan completas en el celular y en la computadora.
 
 ### Key Entities *(include if feature involves data)*

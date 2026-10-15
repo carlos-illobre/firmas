@@ -34,6 +34,6 @@ terminarla se marca `[x]`; no se borra.
 - [ ] T011 [agente] [en curso] Especificar las capacidades 002 a 007: paso 1 (depende de T002)
   Inicio y documentos, plantillas, contactos, tareas, actividad y configuración.
 - [ ] T012 [carlos] Aprobar las especificaciones de las capacidades 002 a 007 (depende de T011)
-- [ ] T013 [carlos] [alta] Habilitar una fuente oficial de normas en el entorno (estimación 15m)
+- [x] T013 [carlos] [alta] Habilitar una fuente oficial de normas en el entorno (estimación 15m)
   Para verificar la ley 25.506 y las demás antes de aprobar la 001: infoleg.gob.ar o
   argentina.gob.ar.

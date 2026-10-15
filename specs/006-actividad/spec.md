@@ -44,11 +44,11 @@ exportar, y comprobar que están los dos eventos.
 
 ### Functional Requirements
 
-- **RF-50**: El historial muestra los eventos de la capacidad 001 y los del estudio
+- **RF-55**: El historial muestra los eventos de la capacidad 001 y los del estudio
   (descargas, cambios de destinatarios, miembros agregados), agrupados por día, con hora al
   segundo, documento y resultado.
-- **RF-51**: Se filtra por período, por participante y por acción.
-- **RF-52**: Se exporta lo filtrado.
+- **RF-56**: Se filtra por período, por participante y por acción.
+- **RF-57**: Se exporta lo filtrado.
 - **RNF-09**: Nadie puede borrar ni cambiar un evento, tampoco un administrador.
 
 ### Key Entities *(include if feature involves data)*

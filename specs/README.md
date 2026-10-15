@@ -54,6 +54,11 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | RF-23 | Qué dice la constancia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-24 | Registro de eventos que no se puede borrar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-25 | Huella del documento firmado | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-26 | Firma digital válida: certificado vigente, verificable y de certificador licenciado | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-27 | La firma digital equivale a la de puño y letra y presume autoría e integridad | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-28 | La firma electrónica se prueba si se la desconoce: la constancia junta esa prueba | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-29 | El remitente ve qué vale cada firma | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-30 | La firma remota es firma digital, con posibles aranceles | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-01 | Celular y computadora | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-02 | Solo ven el documento quienes corresponde | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-03 | Enlace imposible de adivinar, que vence con el pedido | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -63,68 +68,68 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-26 | Inicio muestra un saludo con el nombre y la fecha, y cuatro números: esperando mi acción,… | [002-documentos](002-documentos/spec.md) |
-| RF-27 | Inicio lista lo que requiere atención del abogado, ordenado por urgencia, con acceso… | [002-documentos](002-documentos/spec.md) |
-| RF-28 | Inicio muestra los documentos recientes, los próximos vencimientos y la actividad reciente… | [002-documentos](002-documentos/spec.md) |
-| RF-29 | La lista de documentos muestra, por documento: nombre, etiquetas, cliente, estado, última… | [002-documentos](002-documentos/spec.md) |
-| RF-30 | La lista se filtra por estado (todos, esperando mi acción, esperando a otros, completados,… | [002-documentos](002-documentos/spec.md) |
-| RF-31 | Un buscador en todas las pantallas encuentra documentos, clientes y plantillas por nombre | [002-documentos](002-documentos/spec.md) |
-| RF-32 | El detalle de un documento muestra el nombre, el estado, el tipo, el cliente, el… | [002-documentos](002-documentos/spec.md) |
-| RF-33 | Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de firma | [002-documentos](002-documentos/spec.md) |
-| RF-34 | Un documento se puede archivar y desarchivar; archivado no aparece en «Todos» | [002-documentos](002-documentos/spec.md) |
-| RF-35 | Cada documento tiene un cliente, un responsable del estudio y etiquetas opcionales | [002-documentos](002-documentos/spec.md) |
+| RF-31 | Inicio muestra un saludo con el nombre y la fecha, y cuatro números: esperando mi acción,… | [002-documentos](002-documentos/spec.md) |
+| RF-32 | Inicio lista lo que requiere atención del abogado, ordenado por urgencia, con acceso… | [002-documentos](002-documentos/spec.md) |
+| RF-33 | Inicio muestra los documentos recientes, los próximos vencimientos y la actividad reciente… | [002-documentos](002-documentos/spec.md) |
+| RF-34 | La lista de documentos muestra, por documento: nombre, etiquetas, cliente, estado, última… | [002-documentos](002-documentos/spec.md) |
+| RF-35 | La lista se filtra por estado (todos, esperando mi acción, esperando a otros, completados,… | [002-documentos](002-documentos/spec.md) |
+| RF-36 | Un buscador en todas las pantallas encuentra documentos, clientes y plantillas por nombre | [002-documentos](002-documentos/spec.md) |
+| RF-37 | El detalle de un documento muestra el nombre, el estado, el tipo, el cliente, el… | [002-documentos](002-documentos/spec.md) |
+| RF-38 | Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de firma | [002-documentos](002-documentos/spec.md) |
+| RF-39 | Un documento se puede archivar y desarchivar; archivado no aparece en «Todos» | [002-documentos](002-documentos/spec.md) |
+| RF-40 | Cada documento tiene un cliente, un responsable del estudio y etiquetas opcionales | [002-documentos](002-documentos/spec.md) |
 | RNF-05 | Inicio, la lista y el detalle se usan completos en el celular y en la computadora | [002-documentos](002-documentos/spec.md) |
 
 ### 003 · Plantillas y documentos desde cero
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-36 | Hay plantillas del estudio, con nombre, categoría, texto, datos variables y, opcionalmente,… | [003-plantillas](003-plantillas/spec.md) |
-| RF-37 | Usar una plantilla pide completar sus datos variables y arma el documento del pedido sin… | [003-plantillas](003-plantillas/spec.md) |
-| RF-38 | Las plantillas se listan con su categoría, cuándo y quién la usó por última vez; se filtran… | [003-plantillas](003-plantillas/spec.md) |
-| RF-39 | Se pueden crear, editar y borrar plantillas | [003-plantillas](003-plantillas/spec.md) |
-| RF-40 | Se puede redactar un documento desde cero en el producto, con formato básico (títulos,… | [003-plantillas](003-plantillas/spec.md) |
+| RF-41 | Hay plantillas del estudio, con nombre, categoría, texto, datos variables y, opcionalmente,… | [003-plantillas](003-plantillas/spec.md) |
+| RF-42 | Usar una plantilla pide completar sus datos variables y arma el documento del pedido sin… | [003-plantillas](003-plantillas/spec.md) |
+| RF-43 | Las plantillas se listan con su categoría, cuándo y quién la usó por última vez; se filtran… | [003-plantillas](003-plantillas/spec.md) |
+| RF-44 | Se pueden crear, editar y borrar plantillas | [003-plantillas](003-plantillas/spec.md) |
+| RF-45 | Se puede redactar un documento desde cero en el producto, con formato básico (títulos,… | [003-plantillas](003-plantillas/spec.md) |
 | RNF-06 | Usar una plantilla funciona en el celular y en la computadora | [003-plantillas](003-plantillas/spec.md) |
 
 ### 004 · Clientes y contactos
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-41 | Hay contactos de dos clases: personas y organizaciones | [004-contactos](004-contactos/spec.md) |
-| RF-42 | De una persona se guarda nombre y apellido, correo y teléfono; de una organización, su nombre | [004-contactos](004-contactos/spec.md) |
-| RF-43 | La lista de contactos muestra, de cada uno, cuántos documentos tiene asociados y cuántos… | [004-contactos](004-contactos/spec.md) |
-| RF-44 | Al cargar destinatarios en un pedido se sugieren los contactos guardados | [004-contactos](004-contactos/spec.md) |
-| RF-45 | Los contactos se crean, editan y borran | [004-contactos](004-contactos/spec.md) |
-| RNF-07 | Los datos de los contactos son datos personales y se tratan como tales; su norma (ley… | [004-contactos](004-contactos/spec.md) |
+| RF-46 | Hay contactos de dos clases: personas y organizaciones | [004-contactos](004-contactos/spec.md) |
+| RF-47 | De una persona se guarda nombre y apellido, correo y teléfono; de una organización, su nombre | [004-contactos](004-contactos/spec.md) |
+| RF-48 | La lista de contactos muestra, de cada uno, cuántos documentos tiene asociados y cuántos… | [004-contactos](004-contactos/spec.md) |
+| RF-49 | Al cargar destinatarios en un pedido se sugieren los contactos guardados | [004-contactos](004-contactos/spec.md) |
+| RF-50 | Los contactos se crean, editan y borran | [004-contactos](004-contactos/spec.md) |
+| RNF-07 | Datos personales: solo los necesarios y protegidos (ley 25.326, arts. 4 y 9) | [004-contactos](004-contactos/spec.md) |
 
 ### 005 · Tareas y vencimientos
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-46 | Una tarea tiene título, fecha, tipo (revisión, seguimiento, vencimiento), prioridad,… | [005-tareas](005-tareas/spec.md) |
-| RF-47 | Las tareas se ven en lista o en calendario, y se filtran en mis tareas, asignadas por mí y… | [005-tareas](005-tareas/spec.md) |
-| RF-48 | Las tareas se crean, editan, completan y borran | [005-tareas](005-tareas/spec.md) |
-| RF-49 | El menú muestra cuántas tareas pendientes tiene el abogado | [005-tareas](005-tareas/spec.md) |
+| RF-51 | Una tarea tiene título, fecha, tipo (revisión, seguimiento, vencimiento), prioridad,… | [005-tareas](005-tareas/spec.md) |
+| RF-52 | Las tareas se ven en lista o en calendario, y se filtran en mis tareas, asignadas por mí y… | [005-tareas](005-tareas/spec.md) |
+| RF-53 | Las tareas se crean, editan, completan y borran | [005-tareas](005-tareas/spec.md) |
+| RF-54 | El menú muestra cuántas tareas pendientes tiene el abogado | [005-tareas](005-tareas/spec.md) |
 | RNF-08 | Las tareas se usan completas en el celular y en la computadora | [005-tareas](005-tareas/spec.md) |
 
 ### 006 · Historial y auditoría
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-50 | El historial muestra los eventos de la capacidad 001 y los del estudio (descargas, cambios… | [006-actividad](006-actividad/spec.md) |
-| RF-51 | Se filtra por período, por participante y por acción | [006-actividad](006-actividad/spec.md) |
-| RF-52 | Se exporta lo filtrado | [006-actividad](006-actividad/spec.md) |
+| RF-55 | El historial muestra los eventos de la capacidad 001 y los del estudio (descargas, cambios… | [006-actividad](006-actividad/spec.md) |
+| RF-56 | Se filtra por período, por participante y por acción | [006-actividad](006-actividad/spec.md) |
+| RF-57 | Se exporta lo filtrado | [006-actividad](006-actividad/spec.md) |
 | RNF-09 | Nadie puede borrar ni cambiar un evento, tampoco un administrador | [006-actividad](006-actividad/spec.md) |
 
 ### 007 · Cuentas, equipo y configuración
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-53 | Un abogado se registra con nombre, correo y contraseña, crea su estudio, confirma su… | [007-configuracion](007-configuracion/spec.md) |
-| RF-54 | El administrador invita colaboradores por correo, les asigna un rol, se lo cambia y les… | [007-configuracion](007-configuracion/spec.md) |
-| RF-55 | La seguridad y autenticación del estudio se configura: métodos de acceso y políticas | [007-configuracion](007-configuracion/spec.md) |
-| RF-56 | Cada usuario elige qué avisos recibe | [007-configuracion](007-configuracion/spec.md) |
-| RF-57 | El estudio fija las preferencias de los documentos: formato de fecha, recordatorios y… | [007-configuracion](007-configuracion/spec.md) |
-| RF-58 | El estudio guarda sus datos: nombre, logo e información de contacto | [007-configuracion](007-configuracion/spec.md) |
-| RF-59 | El estudio conecta integraciones con herramientas propias | [007-configuracion](007-configuracion/spec.md) |
+| RF-58 | Un abogado se registra con nombre, correo y contraseña, crea su estudio, confirma su… | [007-configuracion](007-configuracion/spec.md) |
+| RF-59 | El administrador invita colaboradores por correo, les asigna un rol, se lo cambia y les… | [007-configuracion](007-configuracion/spec.md) |
+| RF-60 | La seguridad y autenticación del estudio se configura: métodos de acceso y políticas | [007-configuracion](007-configuracion/spec.md) |
+| RF-61 | Cada usuario elige qué avisos recibe | [007-configuracion](007-configuracion/spec.md) |
+| RF-62 | El estudio fija las preferencias de los documentos: formato de fecha, recordatorios y… | [007-configuracion](007-configuracion/spec.md) |
+| RF-63 | El estudio guarda sus datos: nombre, logo e información de contacto | [007-configuracion](007-configuracion/spec.md) |
+| RF-64 | El estudio conecta integraciones con herramientas propias | [007-configuracion](007-configuracion/spec.md) |
 | RNF-10 | Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se limitan | [007-configuracion](007-configuracion/spec.md) |

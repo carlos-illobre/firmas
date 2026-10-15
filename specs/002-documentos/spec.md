@@ -94,25 +94,25 @@ comprobar los estados y la línea de tiempo.
 
 ### Functional Requirements
 
-- **RF-26**: Inicio muestra un saludo con el nombre y la fecha, y cuatro números: esperando
+- **RF-31**: Inicio muestra un saludo con el nombre y la fecha, y cuatro números: esperando
   mi acción, esperando firma de otros, completados este mes, y demorados o vencidos.
-- **RF-27**: Inicio lista lo que requiere atención del abogado, ordenado por urgencia, con
+- **RF-32**: Inicio lista lo que requiere atención del abogado, ordenado por urgencia, con
   acceso directo a cada uno.
-- **RF-28**: Inicio muestra los documentos recientes, los próximos vencimientos y la
+- **RF-33**: Inicio muestra los documentos recientes, los próximos vencimientos y la
   actividad reciente del estudio.
-- **RF-29**: La lista de documentos muestra, por documento: nombre, etiquetas, cliente,
+- **RF-34**: La lista de documentos muestra, por documento: nombre, etiquetas, cliente,
   estado, última actividad, próxima acción y responsable.
-- **RF-30**: La lista se filtra por estado (todos, esperando mi acción, esperando a otros,
+- **RF-35**: La lista se filtra por estado (todos, esperando mi acción, esperando a otros,
   completados, archivados) y por cliente, y se pagina.
-- **RF-31**: Un buscador en todas las pantallas encuentra documentos, clientes y plantillas
+- **RF-36**: Un buscador en todas las pantallas encuentra documentos, clientes y plantillas
   por nombre.
-- **RF-32**: El detalle de un documento muestra el nombre, el estado, el tipo, el cliente,
+- **RF-37**: El detalle de un documento muestra el nombre, el estado, el tipo, el cliente,
   el responsable, la vista previa paginada, los participantes con su estado, la próxima
   acción con su fecha límite y la línea de tiempo de eventos de la capacidad 001.
-- **RF-33**: Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de
+- **RF-38**: Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de
   firma.
-- **RF-34**: Un documento se puede archivar y desarchivar; archivado no aparece en «Todos».
-- **RF-35**: Cada documento tiene un cliente, un responsable del estudio y etiquetas
+- **RF-39**: Un documento se puede archivar y desarchivar; archivado no aparece en «Todos».
+- **RF-40**: Cada documento tiene un cliente, un responsable del estudio y etiquetas
   opcionales.
 - **RNF-05**: Inicio, la lista y el detalle se usan completos en el celular y en la
   computadora.

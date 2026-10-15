@@ -42,8 +42,8 @@ líneas.
 
 ### Dominios
 
-Además de los del entorno por defecto, Carlos fue habilitando estos, por pedido de una
-sesión:
+Además de los del entorno por defecto, Carlos habilitó estos por pedido de una sesión. Si
+una sesión encuentra alguno cerrado, se lo pide de nuevo:
 
 | Dominio | Para qué |
 |---|---|

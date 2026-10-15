@@ -6,10 +6,10 @@ Tareas del estudio, en lista o calendario, vinculadas a documentos y clientes. D
 
 | ID | En una línea |
 |---|---|
-| RF-46 | Una tarea tiene título, fecha, tipo (revisión, seguimiento, vencimiento), prioridad,… |
-| RF-47 | Las tareas se ven en lista o en calendario, y se filtran en mis tareas, asignadas por mí y… |
-| RF-48 | Las tareas se crean, editan, completan y borran |
-| RF-49 | El menú muestra cuántas tareas pendientes tiene el abogado |
+| RF-51 | Una tarea tiene título, fecha, tipo (revisión, seguimiento, vencimiento), prioridad,… |
+| RF-52 | Las tareas se ven en lista o en calendario, y se filtran en mis tareas, asignadas por mí y… |
+| RF-53 | Las tareas se crean, editan, completan y borran |
+| RF-54 | El menú muestra cuántas tareas pendientes tiene el abogado |
 | RNF-08 | Las tareas se usan completas en el celular y en la computadora |
 
 ## Lo que más pesa

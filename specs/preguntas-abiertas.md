@@ -15,8 +15,9 @@ pregunta, no reglas: la regla se escribe con la norma verificada (constitución,
 Decidido: quien tiene certificado de firma digital lo ingresa y firma con él; quien no,
 firma con firma electrónica (decisión 5), de cualquiera de las tres formas (decisión 19).
 
-1. ¿Hay documentos que el producto no debe aceptar porque la ley exige otra forma (por
-   ejemplo, los que requieren escritura pública)? ¿Se avisa o se bloquea?
+1. Los contratos que la ley obliga a hacer por escritura pública (por ejemplo, los de
+   derechos reales sobre inmuebles, Código Civil y Comercial, art. 1017) no se pueden otorgar
+   con el producto. ¿Se avisa al remitente, se bloquea, o no se hace nada?
 
 ## Para quién y para qué
 
@@ -56,12 +57,6 @@ Decidido: por ahora nadie paga (decisión 6).
 
 Decidido: no hay fecha límite (decisión 9), y la primera versión tiene todas las pantallas de
 las maquetas (decisión 18).
-
-## Las normas
-
-Las fuentes oficiales no se pudieron consultar el 2026-10-15 (la red de la sesión no deja
-pasar infoleg.gob.ar, argentina.gob.ar, boletinoficial.gob.ar ni saij.gob.ar). Hasta
-verificarlas, las reglas jurídicas de las capacidades 001 y 004 quedan «a verificar».
 
 ## 001 · Pedido de firma
 

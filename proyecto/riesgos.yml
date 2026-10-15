@@ -28,7 +28,7 @@ riesgos:
     probabilidad: 3
     impacto: 4
     respuesta: mitigar
-    plan: "Decidir qué firma se ofrece (pregunta 1) antes de especificar, y averiguar los requisitos del certificador elegido"
+    plan: "Decidido: el producto no es certificador, usa el certificado de cada firmante (decisiones 5 y 19). Falta averiguar los aranceles de uso de la Plataforma de Firma Digital Remota y si el producto necesita homologarse (decreto 182/2019, art. 25 de su anexo)"
     contingencia: Lanzar con firma electrónica y sumar la digital después
     disparador: El certificador pide requisitos que no se pueden cumplir en la primera versión
     responsable: Carlos
