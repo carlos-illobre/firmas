@@ -1,0 +1,143 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Firmante: comprobar identidad</title><style>/* Tokens del sistema visual (docs/sistema-visual.md), leídos de la maqueta de Lovable. */
+:root{--fondo:oklch(98.2% .004 95);--texto:oklch(21% .03 264);--tarjeta:#fff;--primario:oklch(52% .13 256);--sobre-primario:oklch(98.5% .005 250);--marino:oklch(24% .055 268);--sobre-marino:oklch(96% .01 250);--apagado:oklch(95.5% .008 250);--texto-apagado:oklch(52% .03 260);--acento:oklch(94% .02 256);--texto-acento:oklch(35% .09 256);--borde:oklch(91.5% .01 255);--campo:oklch(90% .012 255);--peligro:oklch(55% .2 27);--exito:oklch(55% .12 155);--exito-suave:oklch(94% .04 155);--aviso:oklch(62% .12 70);--aviso-suave:oklch(95% .05 85);--info-suave:oklch(94% .025 256);--f1:oklch(52% .13 256);--f2:oklch(60% .14 330);--f3:oklch(60% .13 160);--radio:10px;--sombra:0 1px 3px rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:var(--fondo);color:var(--texto);font-size:14px;line-height:1.45}
+button{font:inherit;cursor:pointer}
+.boton{border:1px solid var(--borde);background:var(--tarjeta);color:var(--texto);border-radius:var(--radio);padding:9px 16px;font-weight:500;box-shadow:var(--sombra)}
+.boton.primario{background:var(--primario);border-color:var(--primario);color:var(--sobre-primario)}
+.boton.texto{border:0;background:none;box-shadow:none;color:var(--primario);padding:9px 4px}
+.boton.peligro{color:var(--peligro)}
+.barra{background:var(--marino);color:var(--sobre-marino);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.marca{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px}
+.marca i{width:30px;height:30px;border-radius:8px;background:var(--primario);display:grid;place-items:center;font-style:normal;font-size:15px}
+.segura{font-size:12px;color:oklch(80% .02 260)}
+.pastilla{display:inline-block;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:500}
+.pastilla.info{background:var(--info-suave);color:var(--texto-acento)}
+.pastilla.exito{background:var(--exito-suave);color:oklch(38% .09 155)}
+.pastilla.aviso{background:var(--aviso-suave);color:var(--aviso)}
+.hoja{background:#fff;box-shadow:0 2px 10px rgba(20,30,60,.12);border-radius:4px;padding:56px 64px;font-family:Georgia,'Times New Roman',serif;font-size:14px;line-height:1.6;color:#1e2330}
+.hoja h2{font-size:17px;text-align:center;letter-spacing:.02em;margin-bottom:22px;font-weight:600}
+.hoja p{margin-bottom:12px;text-align:justify}
+.pie-hoja{font-family:Inter,sans-serif;font-size:11px;color:var(--texto-apagado);text-align:center;margin-top:18px}
+.casilla{font-family:Inter,sans-serif;border:2px dashed var(--f1);background:color-mix(in oklch,var(--f1) 8%,white);border-radius:8px;padding:10px 12px;margin:14px 0;color:var(--texto-acento);font-size:13px}
+.casilla b{display:block;font-size:15px;color:var(--f1)}
+.casilla.hecha{border-style:solid;border-color:var(--exito);background:var(--exito-suave);color:oklch(38% .09 155)}
+.casilla.hecha b{color:oklch(38% .09 155);font-family:'Brush Script MT','Segoe Script',cursive;font-size:22px;font-weight:400}
+.casilla.llena{border-style:solid;background:#fff}
+.casilla.actual{box-shadow:0 0 0 4px color-mix(in oklch,var(--f1) 25%,transparent)}
+.casilla.otro{border-color:var(--f2);background:color-mix(in oklch,var(--f2) 7%,white);color:var(--f2)}
+.casilla.otro b{color:var(--f2)}
+.firmas{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
+.avatar{width:36px;height:36px;border-radius:50%;background:var(--acento);color:var(--texto-acento);display:grid;place-items:center;font-weight:600;font-size:13px;flex:none}
+.progreso{height:6px;background:var(--apagado);border-radius:999px;overflow:hidden}
+.progreso span{display:block;height:100%;background:var(--primario);border-radius:999px}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--borde);border-radius:12px;box-shadow:var(--sombra)}
+.apagado{color:var(--texto-apagado)}
+@media (max-width:640px){.hoja{padding:28px 22px;font-size:13px}.firmas{grid-template-columns:1fr;gap:4px}}
+
+.app{display:grid;grid-template-columns:256px 1fr;min-height:100vh}
+.lateral{background:var(--marino);color:var(--sobre-marino);display:flex;flex-direction:column;padding:16px 12px;gap:6px;position:sticky;top:0;height:100vh}
+.lateral .marca{padding:4px 8px 12px}.lateral .marca small{display:block;font-size:12px;font-weight:400;color:oklch(72% .03 260)}
+.lateral .nuevo{margin:0 0 10px;width:100%;text-align:center;text-decoration:none}
+.lateral a{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-radius:var(--radio);color:oklch(85% .02 260);text-decoration:none}
+.lateral a.activo{background:color-mix(in oklch,var(--primario) 20%,var(--marino));color:var(--sobre-marino)}
+.lateral a em{font-style:normal;font-size:11px;background:oklch(35% .05 265);border-radius:999px;padding:1px 7px}
+.lateral .yo{margin-top:auto;border-top:1px solid oklch(32% .05 265);padding:12px 8px 0;display:flex;gap:10px;align-items:center}
+.lateral .yo small{display:block;color:oklch(72% .03 260);font-size:12px}
+.superior{height:62px;border-bottom:1px solid var(--borde);display:flex;align-items:center;gap:12px;padding:0 32px;background:color-mix(in oklch,var(--fondo) 95%,transparent);position:sticky;top:0;z-index:5}
+.buscar{flex:1;max-width:448px;border:1px solid var(--campo);border-radius:var(--radio);padding:8px 12px;color:var(--texto-apagado);background:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu-cel{display:none}
+.contenido{padding:28px 32px 48px;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-content:start;min-width:0}
+.cabeza{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.cabeza h1{font-size:24px;font-weight:600}
+.cabeza p{color:var(--texto-apagado);margin-top:2px}
+.volver{color:var(--texto-apagado);font-size:14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dato{padding:16px;display:flex;gap:12px;align-items:center}
+.dato i{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-style:normal;font-size:18px;flex:none}
+.dato b{font-size:24px;display:block;line-height:1.1}.dato small{color:var(--texto-apagado)}
+.dos-col{display:grid;grid-template-columns:minmax(0,1fr) 356px;gap:20px;align-items:start}
+.dos-col>div,.conf>div{grid-template-columns:minmax(0,1fr)}
+.tarjeta>h3,.tarjeta>.th{padding:16px 20px;border-bottom:1px solid var(--borde);font-size:16px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.th a{font-size:14px;font-weight:500;color:var(--primario)}
+.fila{display:flex;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid var(--borde)}
+.fila:last-child{border-bottom:0}
+.fila .crece{flex:1;min-width:0}.fila .crece b{font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fila small{color:var(--texto-apagado);font-size:12px}
+.punto{width:8px;height:8px;border-radius:50%;flex:none}
+.boton.chico{padding:5px 12px;font-size:13px}
+.tabla{width:100%;border-collapse:collapse}
+.tabla th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--texto-apagado);text-align:left;font-weight:500;padding:10px 16px;border-bottom:1px solid var(--borde)}
+.tabla td{padding:12px 16px;border-bottom:1px solid var(--borde);vertical-align:middle}
+.tabla td b{font-weight:500}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--borde);background:#fff;border-radius:999px;padding:5px 12px;font-size:13px;white-space:nowrap}
+.chip.activo{background:var(--marino);color:#fff;border-color:var(--marino)}
+.etq{font-size:11px;background:var(--apagado);border-radius:6px;padding:1px 6px;color:var(--texto-apagado);margin-left:4px}
+.pastilla{white-space:nowrap}
+.pastilla.peligro{background:oklch(95% .03 27);color:var(--peligro)}
+.pastilla.gris{background:var(--apagado);color:var(--texto-apagado)}
+.campo-f{display:grid;gap:6px}.campo-f label{font-weight:500;font-size:13px}
+.entrada{border:1px solid var(--campo);border-radius:var(--radio);padding:9px 12px;background:#fff;min-height:38px}
+.entrada.apagada{color:var(--texto-apagado)}
+.entrada.error{border-color:var(--peligro)}
+.ayuda{font-size:12px;color:var(--texto-apagado)}.ayuda.error{color:var(--peligro)}
+.pasos-h{display:flex;align-items:center;gap:10px}
+.pasos-h span{display:flex;align-items:center;gap:8px;color:var(--texto-apagado);white-space:nowrap}
+.pasos-h span i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;background:var(--apagado)}
+.pasos-h span.ok i{background:var(--exito);color:#fff}.pasos-h span.ahora{color:var(--texto);font-weight:500}.pasos-h span.ahora i{background:var(--primario);color:#fff}
+.pasos-h hr{flex:1;border:0;border-top:1px solid var(--borde);min-width:12px}
+.aviso:not(.pastilla){border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.aviso b{display:block}
+.aviso.amarillo{background:var(--aviso-suave);color:oklch(35% .07 70)}
+.aviso.rojo{background:oklch(95% .03 27);color:oklch(40% .15 27)}
+.aviso.verde{background:var(--exito-suave);color:oklch(35% .09 155)}
+.aviso.azul{background:var(--info-suave);color:var(--texto-acento)}
+.aviso .acc{margin-left:auto;display:flex;gap:8px;flex:none}
+.estados{display:grid;gap:12px;margin-top:8px}
+.estados>h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--texto-apagado);font-weight:600;border-top:1px dashed var(--campo);padding-top:20px}
+.estados .varios{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.estado-caja{padding:24px;text-align:center;display:grid;gap:8px;justify-items:center;align-content:start}
+.estado-caja .icono{width:48px;height:48px;border-radius:50%;background:var(--apagado);display:grid;place-items:center;font-size:22px}
+.estado-caja p{color:var(--texto-apagado);max-width:420px}
+.estado-caja .etiqueta{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--texto-apagado)}
+.modal{max-width:520px;width:100%;padding:24px;display:grid;gap:14px;margin:0 auto;box-shadow:0 20px 50px rgba(20,30,60,.18)}
+.modal h3{font-size:18px}
+.color{width:12px;height:12px;border-radius:50%;display:inline-block;flex:none}
+.interruptor{width:36px;height:20px;border-radius:999px;background:var(--campo);position:relative;flex:none;display:inline-block}
+.interruptor:after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff}
+.interruptor.si{background:var(--primario)}.interruptor.si:after{left:18px}
+.check{width:16px;height:16px;border:1.5px solid var(--campo);border-radius:4px;display:inline-grid;place-items:center;font-size:11px;flex:none;background:#fff}
+.check.si{background:var(--primario);border-color:var(--primario);color:#fff}
+.form2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:900px){
+ .app{grid-template-columns:1fr}.lateral{display:none}
+ .menu-cel{display:grid;place-items:center;width:38px;height:38px;border-radius:var(--radio);border:1px solid var(--borde);background:#fff;font-size:18px;flex:none}
+ .superior{padding:0 12px}.solo-compu{display:none!important}
+ .contenido{padding:16px 12px 40px;gap:14px}
+ .grid4{grid-template-columns:1fr 1fr;gap:10px}.dato{padding:12px}.dato i{width:34px;height:34px}.dato b{font-size:20px}
+ .dos-col{grid-template-columns:minmax(0,1fr)}
+ .tabla,.tabla tbody{display:block}.tabla thead{display:none}.tabla tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px;padding:12px 14px;border-bottom:1px solid var(--borde)}
+ .tabla td{padding:0;border:0}.tabla td.oculta{display:none}
+ .pasos-h span em{display:none}.pasos-h span.ahora em{display:inline}
+ .cabeza h1{font-size:21px}.aviso{flex-wrap:wrap}.aviso .acc{margin-left:0}
+ .form2{grid-template-columns:1fr}
+ .fila{padding:12px 14px}.tarjeta>h3,.tarjeta>.th{padding:14px}
+}
+.centro{max-width:960px;margin:0 auto;padding:28px 16px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.caja-i{padding:24px;display:grid;gap:12px}.caja-i h1{font-size:21px}.pasitos{display:flex;gap:6px}.pasitos span{flex:1;height:4px;border-radius:4px;background:var(--apagado)}.pasitos .ok{background:var(--primario)}
+.codigo{display:flex;gap:8px}.codigo span{width:44px;height:52px;border:1px solid var(--campo);border-radius:var(--radio);display:grid;place-items:center;font-size:22px;font-weight:600;background:#fff}
+.fotos{display:grid;grid-template-columns:1fr 1fr;gap:10px}.foto{border:1.5px dashed var(--campo);border-radius:12px;height:96px;display:grid;place-items:center;color:var(--texto-apagado)}.foto.hecha{border:1.5px solid var(--exito);background:var(--exito-suave);color:var(--exito);font-weight:600}
+@media (max-width:760px){.centro{grid-template-columns:1fr}.codigo span{width:40px}}</style></head><body>
+<header class="barra"><div class="marca"><i>✓</i>Firmas</div><span class="segura">🔒 Conexión segura</span></header><main class="centro">
+<div class="tarjeta caja-i"><div class="pasitos"><span class="ok"></span><span></span></div><small class="apagado">Paso 1 de 2 · Confirmá que sos vos</small>
+<h1>Ingresá el código que te mandamos</h1><p class="apagado">Te lo mandamos por SMS al celular terminado en <b>0142</b>. María González pidió esta comprobación antes de que veas el documento.</p>
+<div class="codigo"><span>4</span><span>8</span><span>1</span><span>7</span><span></span><span></span></div>
+<button class="boton primario">Confirmar</button><button class="boton texto">Mandame otro código</button></div>
+<div class="tarjeta caja-i"><div class="pasitos"><span class="ok"></span><span class="ok"></span></div><small class="apagado">Paso 2 de 2 · Confirmá que sos vos</small>
+<h1>Sacale una foto a tu DNI</h1><p class="apagado">El frente y el dorso. Se usan solo para comprobar tu identidad y quedan en la constancia del documento.</p>
+<div class="fotos"><div class="foto hecha">✓ Frente</div><div class="foto">📷 Dorso</div></div>
+<button class="boton primario">Sacar la foto del dorso</button></div>
+</main><div style="max-width:960px;margin:0 auto;padding:0 16px 32px"><section class="estados"><h2>Otros estados de esta pantalla</h2><div class="varios"><div class="tarjeta estado-caja"><span class="etiqueta">Código incorrecto</span><div class="icono">⚠</div><b>Ese código no es</b><p>Revisalo y probá de nuevo. Te quedan 2 intentos.</p><button class="boton texto">Mandame otro código</button></div><div class="tarjeta estado-caja"><span class="etiqueta">Demasiados intentos</span><div class="icono">🔒</div><b>Bloqueamos el acceso por 15 minutos</b><p>Para cuidar el documento. Después podés pedir un código nuevo, o escribirle a María González.</p></div><div class="tarjeta estado-caja"><span class="etiqueta">Foto ilegible</span><div class="icono">⚠</div><b>No se lee bien el DNI</b><p>Probá con más luz, sin reflejos y con el documento entero en la foto.</p><button class="boton">Sacar otra</button></div></div></section></div>
+</body></html>
