@@ -32,10 +32,10 @@ Especificaciones y maquetas aprobadas por Carlos el 2026-10-15. Sigue el paso 3:
 | RF-01 | Se empieza subiendo un archivo, con una plantilla o desde cero | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-02 | PDF o Word de hasta 50 MB; el Word se convierte a PDF y se firma el PDF | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-02a | Cartel si el contrato exige escritura pública; el solicitante decide | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-03 | Destinatarios con nombre, correo y teléfono; firman o reciben copia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-03 | Destinatarios con nombre y correo; firman o reciben copia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-04 | Orden de firma: uno después del otro o todos a la vez | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-05 | Una o dos formas de identidad por firmante: correo, SMS, WhatsApp, DNI o RENAPER | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-06 | Canal por destinatario: correo o WhatsApp | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-05 | Una o dos formas de identidad por firmante: correo, código por correo o foto del DNI | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-06 | Canal: correo (WhatsApp en la segunda versión) | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-07 | Campos ubicados en el documento, con el color de cada firmante | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-08 | Cada firmante, al menos un campo de firma | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-09 | Resumen y mensaje antes de enviar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -46,7 +46,7 @@ Especificaciones y maquetas aprobadas por Carlos el 2026-10-15. Sigue el paso 3:
 | RF-13 | Enlace personal en el mensaje, sin cuenta | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-14 | Identidad comprobada antes de ver el documento | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-15 | Ver todo, descargar y recorrer los campos pendientes | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-16 | Firma digital (archivo, token o firma remota) o electrónica (botón) | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-16 | Firma electrónica con un botón (la digital, en la segunda versión) | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-17 | Rechazar con motivo | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-18 | En orden, cada uno recibe al firmar el anterior | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-19 | Estados del pedido, con «En revisión» | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -56,11 +56,11 @@ Especificaciones y maquetas aprobadas por Carlos el 2026-10-15. Sigue el paso 3:
 | RF-23 | Qué dice la constancia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-24 | Registro de eventos que no se puede borrar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-25 | Huella del documento firmado | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-26 | Firma digital válida: certificado vigente, verificable y de certificador licenciado | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-27 | La firma digital equivale a la de puño y letra y presume autoría e integridad | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-26 | (Segunda versión) Firma digital válida: certificado vigente, verificable y licenciado | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-27 | (Segunda versión) La firma digital equivale a la de puño y letra | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-28 | La firma electrónica se prueba si se la desconoce: la constancia junta esa prueba | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-29 | El solicitante ve qué vale cada firma | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-30 | La firma remota es firma digital, con posibles aranceles | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-29 | El solicitante y el firmante ven qué vale la firma electrónica | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-30 | (Segunda versión) La firma remota es firma digital, con posibles aranceles | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-01 | Celular y computadora | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-02 | Solo ven el documento quienes corresponde | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-03 | Enlace imposible de adivinar, que vence con el pedido | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -135,5 +135,5 @@ Especificaciones y maquetas aprobadas por Carlos el 2026-10-15. Sigue el paso 3:
 | RF-61 | Cada usuario elige qué avisos recibe | [007-configuracion](007-configuracion/spec.md) |
 | RF-62 | El estudio fija las preferencias de los documentos: formato de fecha, recordatorios y… | [007-configuracion](007-configuracion/spec.md) |
 | RF-63 | El estudio guarda sus datos: nombre, logo e información de contacto | [007-configuracion](007-configuracion/spec.md) |
-| RF-64 | El producto no se conecta con otros servicios, salvo los mínimos necesarios para funcionar:… | [007-configuracion](007-configuracion/spec.md) |
+| RF-64 | Sin integraciones salvo las mínimas: en la primera versión, solo el correo | [007-configuracion](007-configuracion/spec.md) |
 | RNF-10 | Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se limitan | [007-configuracion](007-configuracion/spec.md) |

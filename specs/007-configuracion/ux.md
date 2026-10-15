@@ -10,7 +10,8 @@ concreto está en [maquetas/](maquetas/). Estilo: [sistema visual](../../docs/si
 - Crear cuenta: nombre, apellido, correo, contraseña (al menos 10 caracteres, dicho debajo) y
   nombre del estudio. Aclara que es gratis y que los firmantes no necesitan cuenta.
 - Estados: ingresar (con error de correo o contraseña sin decir cuál de los dos falló),
-  olvidé mi contraseña, confirmar el correo, segundo factor e invitación a un estudio.
+  olvidé mi contraseña, confirmar el correo, segundo factor (código por correo) e invitación
+  a un estudio.
 
 ## Configuración
 

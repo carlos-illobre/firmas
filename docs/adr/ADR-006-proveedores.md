@@ -1,6 +1,6 @@
 # ADR-006: Mensajería, identidad y certificado de aplicación
 
-**Estado**: Propuesto: espera la decisión de Carlos, porque tiene costo · **Fecha**: 2026-10-15
+**Estado**: Aceptado en parte (2026-10-15): lo de la primera versión está decidido; el resto queda para la segunda · **Fecha**: 2026-10-15
 
 ## Contexto
 
@@ -55,4 +55,10 @@ lanzamiento, cuando se sepa el costo.
 
 ## Decisión
 
-Pendiente de Carlos.
+Carlos decidió que la primera versión no use proveedores pagos (decisión 42):
+
+- **Correo**: Amazon SES, en una región de la Unión Europea (ADR-005).
+- **Certificado de aplicación**: uno propio, sin certificador licenciado. Pasar a uno
+  licenciado es una decisión de Carlos antes del lanzamiento.
+- **WhatsApp, SMS y RENAPER**: no entran en la primera versión. Las opciones y los costos de
+  arriba quedan para cuando se especifique la segunda.

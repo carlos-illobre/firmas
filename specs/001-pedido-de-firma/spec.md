@@ -11,12 +11,23 @@
 **Input**: Las decisiones de Carlos del 2026-10-15 (5, 7, 8, 11 a 17, 19 a 29 y 36 de
 [docs/decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md)): un abogado prepara un
 documento, carga a los firmantes, elige cómo firma y se identifica cada uno, y lo envía; cada
-firmante firma desde el correo, con su certificado o con firma electrónica; al terminar
+firmante firma desde el correo con firma electrónica; al terminar
 queda el documento firmado y una constancia de lo que pasó.
 
 <!-- Cada escenario de aceptación lleva un número que no se repite en este archivo:
      «1. **E01** **Given** …». El paso de QA agrega los de error, los de borde y los que
      salen de la sección «Seguridad» del plan. Cada prueba nombra su escenario (001-E01). -->
+
+## Primera y segunda versión
+
+Carlos decidió el 2026-10-15 que la primera versión no use proveedores pagos (decisión 42).
+Lo que dice **(segunda versión)** está especificado y aprobado, pero no entra en la primera:
+
+| Primera versión | Segunda versión |
+|---|---|
+| Firma electrónica | Firma digital: archivo, token y Firma Digital Remota |
+| Pedido por correo | Pedido por WhatsApp |
+| Identidad: correo, código por correo, foto del DNI guardada sin validar | Código por SMS o WhatsApp, validación contra RENAPER |
 
 ## Palabras
 
@@ -82,8 +93,8 @@ que el primer firmante recibe el correo.
 
 El firmante recibe el pedido, aprieta el botón del mensaje y llega al documento sin crear
 una cuenta. Si el solicitante eligió una forma de comprobar su identidad, la pasa primero. Lee
-el documento, completa sus campos y firma: con su certificado de firma digital, de una de
-tres formas, o con firma electrónica apretando un botón (decisiones 12 y 19).
+el documento, completa sus campos y firma con firma electrónica, apretando un botón
+(decisiones 12 y 42). La firma digital es de la segunda versión.
 
 **Why this priority**: es la otra mitad del corazón del producto, y la usa gente que no es
 abogada, a menudo desde el celular.
@@ -96,17 +107,19 @@ identidad, firmar con firma electrónica y ver que el pedido avanza.
 1. **E08** **Given** un firmante que recibió el pedido, **When** aprieta el botón del
    mensaje, **Then** ve el documento completo, sin crear cuenta, con sus campos marcados y
    la opción de descargar una copia.
-2. **E09** **Given** un firmante para quien el solicitante eligió código por SMS, **When** abre
-   el pedido, **Then** tiene que ingresar el código que le llegó al teléfono antes de ver el
-   documento.
-3. **E26** **Given** un firmante para quien el solicitante eligió código por SMS y foto del
-   DNI, **When** abre el pedido, **Then** tiene que pasar las dos antes de ver el documento.
-4. **E10** **Given** un firmante sin certificado, **When** completa sus campos y elige firma
-   electrónica, **Then** firma apretando un botón y el pedido registra la firma con la forma
+2. **E09** **Given** un firmante para quien el solicitante eligió código por correo, **When**
+   abre el pedido, **Then** tiene que ingresar el código que le llegó al correo antes de ver
+   el documento.
+3. **E26** **Given** un firmante para quien el solicitante eligió código por correo y foto del
+   DNI, **When** abre el pedido, **Then** tiene que pasar las dos antes de ver el documento, y
+   las fotos quedan en la constancia.
+4. **E10** **Given** un firmante, **When** completa sus campos y aprieta «Firmar», **Then**
+   firma con firma electrónica y el pedido registra la firma con la forma
    de identidad que usó.
-5. **E11** **Given** un firmante con certificado de firma digital, **When** elige firmar con
-   él, **Then** puede hacerlo subiendo el archivo del certificado, con su token o con la
-   Plataforma de Firma Digital Remota, y la firma queda hecha con ese certificado.
+5. **E11** *(segunda versión)* **Given** un firmante con certificado de firma digital,
+   **When** elige firmar con él, **Then** puede hacerlo subiendo el archivo del certificado,
+   con su token o con la Plataforma de Firma Digital Remota, y la firma queda hecha con ese
+   certificado.
 6. **E12** **Given** un firmante con campos obligatorios sin completar, **When** quiere
    firmar, **Then** no puede, y el producto lo lleva al próximo campo pendiente.
 7. **E13** **Given** el último firmante, **When** firma, **Then** el pedido pasa a
@@ -181,7 +194,7 @@ la huella coincide con el documento firmado.
 - Un firmante figura dos veces, o el solicitante es también firmante.
 - El correo de un firmante rebota: se avisa al solicitante.
 - Un firmante abre el enlace de un pedido rechazado, vencido, cancelado o que ya firmó.
-- El certificado del firmante está vencido o revocado.
+- *(Segunda versión)* El certificado del firmante está vencido o revocado.
 - Un firmante quiere delegar la firma en otra persona.
 - El documento final y la constancia tienen que poder verificarse sin el producto.
 
@@ -205,17 +218,18 @@ la huella coincide con el documento firmado.
 
 **Los destinatarios**
 
-- **RF-03**: El solicitante carga cada destinatario con nombre y apellido, correo y, si el
-  canal o la forma de identidad lo piden, teléfono celular. Marca si es firmante o recibe
+- **RF-03**: El solicitante carga cada destinatario con nombre y apellido y correo; y, en la
+  segunda versión, si el canal o la forma de identidad lo piden, teléfono celular. Marca si es firmante o recibe
   copia. Puede agregarse a sí mismo como firmante.
 - **RF-04**: El solicitante elige el orden de firma: uno después del otro, en el orden que
   arma, o todos a la vez (decisión 15).
 - **RF-05**: Para cada firmante, el solicitante elige una o dos formas de comprobar su
-  identidad si firma con firma electrónica: correo, código por SMS, código por WhatsApp, foto
-  del DNI o validación contra RENAPER (decisiones 13, 20 y 27). Con dos, el firmante pasa
-  las dos.
+  identidad: correo, código por correo o foto del DNI (decisiones 13, 20, 27 y 42). Con dos,
+  el firmante pasa las dos. La foto del DNI, frente y dorso, se guarda en la constancia sin
+  validarla contra nada. *(Segunda versión)* También código por SMS, código por WhatsApp y
+  validación contra RENAPER.
 - **RF-06**: Para cada destinatario, el solicitante elige el canal por el que le llega el
-  pedido: correo o WhatsApp (decisiones 21 y 26).
+  pedido: correo (decisiones 21, 26 y 42). *(Segunda versión)* También WhatsApp.
 
 **Los campos**
 
@@ -250,10 +264,10 @@ la huella coincide con el documento firmado.
   bloquea 15 minutos (decisión 41).
 - **RF-15**: El firmante ve el documento completo, puede descargar una copia, y el producto lo
   lleva de un campo pendiente al siguiente.
-- **RF-16**: El firmante elige firmar con firma digital o con firma electrónica. Con firma
-  digital usa su certificado de una de tres formas: subiendo el archivo del certificado, con
-  su token, o con la Plataforma de Firma Digital Remota (decisiones 5 y 19). Con firma
-  electrónica firma apretando un botón (decisión 12).
+- **RF-16**: El firmante firma con firma electrónica apretando un botón (decisiones 12 y 42).
+  *(Segunda versión)* También puede elegir firma digital, con su certificado de una de tres
+  formas: subiendo el archivo del certificado, con su token, o con la Plataforma de Firma
+  Digital Remota (decisiones 5 y 19).
 - **RF-17**: El firmante puede rechazar el pedido, escribiendo el motivo.
 - **RF-18**: Con el orden «uno después del otro», cada firmante recibe el pedido cuando firma
   el anterior.
@@ -301,11 +315,11 @@ la huella coincide con el documento firmado.
 Verificadas el 2026-10-15 en argentina.gob.ar: la ley 25.506 en su texto actualizado, el
 Código Civil y Comercial (ley 26.994) en su texto original y el decreto 182/2019.
 
-- **RF-26**: Una firma hecha con certificado vale como firma digital solo si el certificado
+- **RF-26** *(segunda versión)*: Una firma hecha con certificado vale como firma digital solo si el certificado
   estaba vigente al firmar, la firma se verifica con los datos del certificado y el
   certificado lo emitió un certificador licenciado. Si falla alguna de las tres, el producto
   no la presenta como firma digital. *Ley 25.506, arts. 9, 14 y 15.*
-- **RF-27**: Una firma digital válida satisface la exigencia de firma de puño y letra, y se
+- **RF-27** *(segunda versión)*: Una firma digital válida satisface la exigencia de firma de puño y letra, y se
   presume, salvo prueba en contrario, que es del titular del certificado y que el documento
   no cambió desde que se firmó. *Ley 25.506, arts. 3, 7 y 8; Código Civil y Comercial,
   art. 288.*
@@ -314,17 +328,18 @@ Código Civil y Comercial (ley 26.994) en su texto original y el decreto 182/201
   constancia junta la prueba de quién firmó y de que el documento no cambió. *Ley 25.506,
   art. 5; Código Civil y Comercial, arts. 314 y 319, que dejan al juez ponderar la
   confiabilidad de los soportes y de los procedimientos técnicos.*
-- **RF-29**: El producto le dice al solicitante, en palabras simples, qué vale cada firma: la
-  digital equivale a la de puño y letra; la electrónica vale como prueba, que hay que
-  sostener si se la desconoce. *Ley 25.506, arts. 3 y 5.*
-- **RF-30**: La firma digital remota es una firma digital: el certificado lo guarda la
+- **RF-29**: El producto le dice al solicitante y al firmante, en palabras simples, qué vale la
+  firma electrónica: vale como prueba, que hay que sostener con la constancia si se la
+  desconoce. *Ley 25.506, art. 5.* *(Segunda versión)* También qué vale la digital: equivale
+  a la de puño y letra. *Ley 25.506, art. 3.*
+- **RF-30** *(segunda versión)*: La firma digital remota es una firma digital: el certificado lo guarda la
   Plataforma de Firma Digital Remota, creada por el decreto 892/2017, y su uso puede tener
   aranceles. *Decreto 182/2019, considerandos y art. 25 de su anexo.*
 
 La ley 25.506 ya no excluye ningún acto (su art. 4 fue derogado por la ley 27.446), pero los
 contratos que la ley obliga a hacer por escritura pública, como los de derechos reales sobre
 inmuebles, no se pueden otorgar con este producto. *Código Civil y Comercial, arts. 285, 299
-y 1017.* Qué hace el producto con ellos es una pregunta abierta.
+y 1017.* Por eso, el cartel de RF-02a.
 
 Qué tiene que tener la constancia más allá de lo anterior, y cuánto tiempo se guarda, no
 tiene una norma identificada: es una pregunta abierta.
@@ -339,7 +354,7 @@ tiene una norma identificada: es una pregunta abierta.
   su color, el canal, la forma de identidad y su estado (enviado, visto, firmado, rechazado).
 - **Campo**: a qué firmante pertenece, su tipo, su página y su lugar, si es obligatorio y su
   valor una vez completado.
-- **Firma**: quién firmó, cuándo, si fue digital o electrónica, con qué certificado o con qué
+- **Firma**: quién firmó, cuándo, si fue electrónica o (en la segunda versión) digital, con qué certificado o con qué
   forma de identidad.
 - **Evento**: el pedido, quién, qué pasó, cuándo, desde qué dirección IP y dispositivo.
 - **Constancia**: el pedido, los eventos que resume, su fecha y su huella.

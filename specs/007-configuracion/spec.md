@@ -90,8 +90,9 @@ nuevo los trae.
   recordatorios y vencimiento predeterminados, y forma de firma predeterminada.
 - **RF-63**: El estudio guarda sus datos: nombre, logo e información de contacto.
 - **RF-64**: El producto no se conecta con otros servicios, salvo los mínimos necesarios
-  para funcionar: el envío de correos, de WhatsApp y de SMS, la validación de identidad, y la
-  firma digital (decisión 37). No hay una sección de integraciones.
+  para funcionar (decisión 37): en la primera versión, solo el envío de correos (decisión 42);
+  en la segunda, también WhatsApp, SMS, la validación contra RENAPER y la firma digital. No
+  hay una sección de integraciones.
 - **RNF-10**: Las contraseñas tienen al menos 10 caracteres (decisión 41), no se guardan en claro y los intentos de ingreso fallidos se
   limitan.
 
@@ -111,7 +112,7 @@ nuevo los trae.
 
 Supuestos aprobados por Carlos el 2026-10-15 (decisión 39):
 
-- Se entra con correo y contraseña, y se puede activar un segundo factor por código.
+- Se entra con correo y contraseña, y se puede activar un segundo factor: un código por correo.
 - Un usuario pertenece a un solo estudio. Quien se registra sin invitación crea un estudio
   nuevo.
 - «Facturación y plan» no está en la primera versión, porque nadie paga (decisión 6).

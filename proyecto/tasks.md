@@ -38,5 +38,14 @@ terminarla se marca `[x]`; no se borra.
   Para verificar la ley 25.506 y las demás antes de aprobar la 001: infoleg.gob.ar o
   argentina.gob.ar.
 - [x] T014 [agente] La compuerta no pide tarea para tmp/, la carpeta descartable
-- [ ] T015 [carlos] [alta] Decidir alojamiento y proveedores con costo: ADR-005 y ADR-006 (depende de T007)
-- [ ] T016 [carlos] Cotizar la validación contra RENAPER y el certificado de aplicación licenciado (depende de T015)
+- [ ] T015 [carlos] [alta] Decidir el alojamiento: ADR-005 (depende de T007)
+
+## Segunda versión
+
+Lo que la decisión 42 sacó de la primera versión. Cada una se especifica con sus maquetas
+antes de programarse.
+
+- [ ] T016 [carlos] Cotizar la validación contra RENAPER y el certificado de aplicación licenciado
+- [ ] T017 [agente] Firma digital: archivo del certificado, token y Firma Digital Remota (ADR-002), con su maqueta
+- [ ] T018 [agente] Pedido de firma por WhatsApp
+- [ ] T019 [agente] Identidad por código por SMS o WhatsApp y validación contra RENAPER (depende de T016)

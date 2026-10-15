@@ -65,3 +65,12 @@ Si la Firma Digital Remota publica una interfaz para aplicaciones de terceros.
 - Política Única de Certificación v2.0 AC MODERNIZACIÓN-PFDR,
   <https://www.argentina.gob.ar/sites/default/files/anexo_1_resol_13_2018_sma_puc_v2.pdf>.
 - ETSI EN 319 142 (PAdES).
+
+## Enmienda del 2026-10-15: la primera versión, solo firma electrónica
+
+Carlos decidió que la primera versión no use proveedores pagos (decisión 42): firma solo con
+firma electrónica. La decisión de arriba sigue valiendo, porque la firma digital se suma en
+la segunda versión sobre el mismo PDF; pero en la primera versión solo se agregan firmas
+electrónicas PAdES con el certificado de aplicación, y no hay firma en el navegador, ni
+subida de PDF firmados afuera, ni verificación de certificados de firmantes. El cambio en la
+maqueta `firmante-firmar` queda para cuando se especifique la segunda versión.

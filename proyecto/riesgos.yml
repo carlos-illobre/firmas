@@ -32,7 +32,7 @@ riesgos:
     contingencia: Lanzar con firma electrónica y sumar la digital después
     disparador: El certificador pide requisitos que no se pueden cumplir en la primera versión
     responsable: Carlos
-    estado: abierto
+    estado: "aplazado: la primera versión no tiene firma digital (decisión 42)"
 
   - id: R-04
     riesgo: Al compartir la prioridad con Ferretería y Minihotel, los tres avanzan lento
@@ -54,7 +54,7 @@ riesgos:
     contingencia: Medir cuántos abandonan en ese paso y simplificar la guía
     disparador: Más de uno de cada cinco firmantes con firma digital no termina
     responsable: Carlos
-    estado: abierto
+    estado: "aplazado: la primera versión no tiene firma digital (decisión 42)"
 
   - id: R-06
     riesgo: Los costos de mensajes, validación de identidad y alojamiento crecen sin ingresos, porque por ahora nadie paga
@@ -62,7 +62,18 @@ riesgos:
     impacto: 3
     respuesta: aceptar
     plan: "Elegir los proveedores más baratos (ADR-005 y ADR-006) y mirar el gasto cada mes"
-    contingencia: Limitar el SMS y la validación contra RENAPER, que son lo más caro
+    contingencia: "La primera versión ya deja afuera WhatsApp, SMS y RENAPER (decisión 42); si el alojamiento o el correo crecen, revisar ADR-005"
     disparador: El gasto mensual supera lo que Carlos fije
+    responsable: Carlos
+    estado: abierto
+
+  - id: R-07
+    riesgo: En la primera versión la identidad del firmante se prueba solo con el correo, un código por correo o una foto del DNI sin validar; si un firmante desconoce su firma, la prueba es más débil
+    probabilidad: 2
+    impacto: 4
+    respuesta: aceptar
+    plan: "La constancia junta todo lo que hay (enlace personal, código, fotos, IP, dispositivo, huellas) y el producto dice qué vale la firma electrónica (RF-29); la segunda versión suma SMS, RENAPER y firma digital"
+    contingencia: Adelantar la segunda versión para los estudios que la necesiten
+    disparador: Un firmante desconoce una firma hecha con el producto
     responsable: Carlos
     estado: abierto

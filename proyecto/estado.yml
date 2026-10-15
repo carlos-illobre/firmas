@@ -116,11 +116,11 @@ RF-25:
   pruebas: []
   defectos: []
 RF-26:
-  estado: "Nuevo: especificación aprobada, sin código"
+  estado: "Pendiente: fuera de esta etapa (segunda versión, decisión 42)"
   pruebas: []
   defectos: []
 RF-27:
-  estado: "Nuevo: especificación aprobada, sin código"
+  estado: "Pendiente: fuera de esta etapa (segunda versión, decisión 42)"
   pruebas: []
   defectos: []
 RF-28:
@@ -132,7 +132,7 @@ RF-29:
   pruebas: []
   defectos: []
 RF-30:
-  estado: "Nuevo: especificación aprobada, sin código"
+  estado: "Pendiente: fuera de esta etapa (segunda versión, decisión 42)"
   pruebas: []
   defectos: []
 RNF-01:

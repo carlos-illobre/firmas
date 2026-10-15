@@ -105,3 +105,9 @@ Lo que todavía no está decidido está en
     tiene al menos 10 caracteres; cancelar un pedido pide confirmación; el menú dice
     «Historial» en vez de «Actividad»; «Firmas» es el nombre provisorio; y el ingreso a la
     Firma Digital Remota se confirma en el paso 3.
+42. **Primera versión sin proveedores pagos.** La primera versión firma solo con firma
+    electrónica, manda los pedidos solo por correo, y comprueba la identidad con el correo,
+    un código por correo o una foto del DNI, que se guarda en la constancia sin validarla
+    contra nada. La firma digital (archivo, token y Firma Digital Remota), el WhatsApp, el
+    código por SMS o WhatsApp y la validación contra RENAPER pasan a la segunda versión.
+    Modifica, para la primera versión, las decisiones 5, 13, 19, 21 y 26.

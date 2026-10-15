@@ -12,7 +12,7 @@ Registro e ingreso, equipo con roles, seguridad, avisos, preferencias, integraci
 | RF-61 | Cada usuario elige qué avisos recibe |
 | RF-62 | El estudio fija las preferencias de los documentos: formato de fecha, recordatorios y… |
 | RF-63 | El estudio guarda sus datos: nombre, logo e información de contacto |
-| RF-64 | El producto no se conecta con otros servicios, salvo los mínimos necesarios para funcionar:… |
+| RF-64 | Sin integraciones salvo las mínimas: en la primera versión, solo el correo |
 | RNF-10 | Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se limitan |
 
 ## Lo que más pesa

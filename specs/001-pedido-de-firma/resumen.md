@@ -11,10 +11,10 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 | RF-01 | Se empieza subiendo un archivo, con una plantilla o desde cero |
 | RF-02 | PDF o Word de hasta 50 MB; el Word se convierte a PDF y se firma el PDF |
 | RF-02a | Cartel si el contrato exige escritura pública; el solicitante decide |
-| RF-03 | Destinatarios con nombre, correo y teléfono; firman o reciben copia |
+| RF-03 | Destinatarios con nombre y correo; firman o reciben copia |
 | RF-04 | Orden de firma: uno después del otro o todos a la vez |
-| RF-05 | Una o dos formas de identidad por firmante: correo, SMS, WhatsApp, DNI o RENAPER |
-| RF-06 | Canal por destinatario: correo o WhatsApp |
+| RF-05 | Una o dos formas de identidad por firmante: correo, código por correo o foto del DNI |
+| RF-06 | Canal: correo (WhatsApp en la segunda versión) |
 | RF-07 | Campos ubicados en el documento, con el color de cada firmante |
 | RF-08 | Cada firmante, al menos un campo de firma |
 | RF-09 | Resumen y mensaje antes de enviar |
@@ -25,7 +25,7 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 | RF-13 | Enlace personal en el mensaje, sin cuenta |
 | RF-14 | Identidad comprobada antes de ver el documento |
 | RF-15 | Ver todo, descargar y recorrer los campos pendientes |
-| RF-16 | Firma digital (archivo, token o firma remota) o electrónica (botón) |
+| RF-16 | Firma electrónica con un botón (la digital, en la segunda versión) |
 | RF-17 | Rechazar con motivo |
 | RF-18 | En orden, cada uno recibe al firmar el anterior |
 | RF-19 | Estados del pedido, con «En revisión» |
@@ -35,11 +35,11 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 | RF-23 | Qué dice la constancia |
 | RF-24 | Registro de eventos que no se puede borrar |
 | RF-25 | Huella del documento firmado |
-| RF-26 | Firma digital válida: certificado vigente, verificable y de certificador licenciado |
-| RF-27 | La firma digital equivale a la de puño y letra y presume autoría e integridad |
+| RF-26 | (Segunda versión) Firma digital válida: certificado vigente, verificable y licenciado |
+| RF-27 | (Segunda versión) La firma digital equivale a la de puño y letra |
 | RF-28 | La firma electrónica se prueba si se la desconoce: la constancia junta esa prueba |
-| RF-29 | El solicitante ve qué vale cada firma |
-| RF-30 | La firma remota es firma digital, con posibles aranceles |
+| RF-29 | El solicitante y el firmante ven qué vale la firma electrónica |
+| RF-30 | (Segunda versión) La firma remota es firma digital, con posibles aranceles |
 | RNF-01 | Celular y computadora |
 | RNF-02 | Solo ven el documento quienes corresponde |
 | RNF-03 | Enlace imposible de adivinar, que vence con el pedido |
@@ -47,6 +47,8 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 
 ## Lo que más pesa
 
+- Primera versión sin proveedores pagos (decisión 42): firma electrónica, pedido por correo,
+  identidad por correo, código por correo o foto del DNI. Lo demás, en la segunda versión.
 - El firmante no necesita cuenta y firma desde el mensaje.
 - El solicitante decide todo por firmante: orden, canal y una o dos formas de identidad.
 - Los dos roles son solicitante y firmante.
@@ -56,7 +58,7 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 
 ## Decisiones de Carlos
 
-5, 7, 8, 11 a 17, 19 a 29 y 36 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
+5, 7, 8, 11 a 17, 19 a 29, 36 y 42 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
 ## Estado de la especificación
 
