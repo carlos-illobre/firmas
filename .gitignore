@@ -1,0 +1,25 @@
+# Configuración real de cada ambiente: nunca al repositorio
+.env
+
+# Documentos de verdad (contratos, poderes, escritos) nunca entran: el repositorio es
+# público. Los ejemplos para pruebas se inventan y se nombran en tests/.
+privado/
+
+# Dependencias y artefactos
+node_modules/
+dist/
+coverage/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporales de la sesión de Claude
+.claude/settings.local.json
+# Carpeta de trabajo descartable: nada de acá se versiona ni sobrevive a la tarea
+tmp/
+
+# Qué tarea tiene empezada cada sesión: lo usa la compuerta del flujo de trabajo
+.specify/en-curso.json

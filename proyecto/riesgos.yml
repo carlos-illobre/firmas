@@ -1,0 +1,46 @@
+# Registro de riesgos. Probabilidad e impacto de 1 a 5; la severidad es el producto.
+# Primera lista, del 2026-10-15, al crear el proyecto: la revisa Carlos.
+riesgos:
+  - id: R-01
+    riesgo: Un documento firmado con el producto no vale como se esperaba en un juicio, porque la firma o la prueba de identidad no alcanzan lo que pide la ley
+    probabilidad: 3
+    impacto: 5
+    respuesta: evitar
+    plan: "Cada regla jurídica se escribe con su norma citada (constitución, principio II) y la valida un abogado antes del lanzamiento"
+    contingencia: Limitar el producto a los documentos donde la firma que ofrece alcanza, y decirlo en la pantalla
+    disparador: Un abogado o un juzgado cuestiona la validez de un documento firmado
+    responsable: Carlos
+    estado: abierto
+
+  - id: R-02
+    riesgo: Se filtra un documento de un cliente, que está amparado por el secreto profesional
+    probabilidad: 2
+    impacto: 5
+    respuesta: mitigar
+    plan: "La sección «Seguridad» de cada plan contesta quién ve cada documento y qué queda registrado; el repositorio público nunca guarda documentos reales"
+    contingencia: Avisar a los afectados y a la autoridad de datos personales, y cortar el acceso comprometido
+    disparador: Un acceso a un documento que no corresponde
+    responsable: Carlos
+    estado: abierto
+
+  - id: R-03
+    riesgo: Ofrecer firma digital exige integrarse con un certificador licenciado o serlo, y eso lleva más tiempo o costo del previsto
+    probabilidad: 3
+    impacto: 4
+    respuesta: mitigar
+    plan: "Decidir qué firma se ofrece (pregunta 1) antes de especificar, y averiguar los requisitos del certificador elegido"
+    contingencia: Lanzar con firma electrónica y sumar la digital después
+    disparador: El certificador pide requisitos que no se pueden cumplir en la primera versión
+    responsable: Carlos
+    estado: abierto
+
+  - id: R-04
+    riesgo: Al compartir la prioridad con Ferretería y Minihotel, los tres avanzan lento
+    probabilidad: 3
+    impacto: 3
+    respuesta: aceptar
+    plan: Es la prioridad acordada; el tablero del portafolio muestra cuál se atrasa
+    contingencia: Pedirle a Carlos que reordene la prioridad
+    disparador: Una etapa de cualquiera de los tres vence con tareas abiertas
+    responsable: Carlos
+    estado: abierto

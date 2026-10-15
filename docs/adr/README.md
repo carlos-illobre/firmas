@@ -1,0 +1,15 @@
+# Registros de decisiones de arquitectura
+
+**Si hubo una alternativa razonable, hay un ADR.** El número se reserva al empezar a
+escribirlo; este índice dice qué números están tomados. Un ADR viejo nunca se reescribe: si
+una decisión posterior lo modifica, se le agrega una enmienda al final que apunta al nuevo.
+
+Formato: `ADR-NNN-titulo-en-kebab-case.md`, con contexto, opciones consideradas (incluida
+la que parecía buena y no lo era), decisión, consecuencias positivas, negativas y lo que
+no cambia, cuándo revisarla y referencias.
+
+Todavía no hay ninguno: los primeros salen del paso 3 de la primera capacidad (stack,
+alojamiento, proveedor de firma, verificación de identidad y compuertas de calidad).
+
+| N.º | Título | Estado | Fecha |
+|---|---|---|---|

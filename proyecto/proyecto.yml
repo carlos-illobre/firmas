@@ -1,0 +1,39 @@
+# Ficha del proyecto. La lee el portafolio (github.com/carlos-illobre/portafolio) y es la
+# fuente de verdad de objetivos, interesados, supuestos, restricciones y cronograma.
+nombre: Firmas
+tipo: software
+estado: idea
+resumen: >-
+  Firma de documentos para abogados en la Argentina: un producto como DocuSign, pensado
+  para el mercado argentino y para el trabajo de un estudio jurídico.
+
+# Solo lo que Carlos dijo al crear el proyecto (2026-10-15). El resto sale de las
+# preguntas de specs/preguntas-abiertas.md.
+objetivos:
+  corto:
+    - Definir el producto y escribir la especificación de la primera versión
+  mediano:
+    - Que abogados en la Argentina firmen documentos con el producto
+  largo: []
+
+criterios_de_exito: []
+
+interesados:
+  - nombre: Carlos
+    rol: Dueño y desarrollador
+    interes: Lanzar un producto de firma para el mercado argentino
+  - nombre: Abogados y estudios jurídicos
+    rol: Clientes
+    interes: Firmar y hacer firmar documentos con validez en la Argentina
+
+supuestos: []
+
+restricciones:
+  - El repositorio es público; ningún documento ni dato real entra en él
+  - Está en el primer grupo de prioridad del portafolio, con Ferretería y Minihotel
+
+requerimientos: specs/README.md
+estado_de_requerimientos: proyecto/estado.yml
+
+# Sin fechas: las define Carlos (pregunta 20 de specs/preguntas-abiertas.md).
+cronograma: []
