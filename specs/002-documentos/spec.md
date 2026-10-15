@@ -6,7 +6,7 @@
 
 **Status**: Aprobada (2026-10-15)
 
-**Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
+**Maquetas**: Aprobadas (2026-10-15, decisiones 40 y 41); ver [ux.md](ux.md)
 
 **Input**: Decisiones 18, 30 y 31 de Carlos (2026-10-15): la primera versión tiene todas las pantallas
 de las maquetas. Esta capacidad cubre Inicio, la lista de documentos y el detalle de un

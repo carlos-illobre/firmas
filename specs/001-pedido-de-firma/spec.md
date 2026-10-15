@@ -6,7 +6,7 @@
 
 **Status**: Aprobada (2026-10-15)
 
-**Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
+**Maquetas**: Aprobadas (2026-10-15, decisiones 40 y 41); ver [ux.md](ux.md)
 
 **Input**: Las decisiones de Carlos del 2026-10-15 (5, 7, 8, 11 a 17, 19 a 29 y 36 de
 [docs/decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md)): un abogado prepara un
@@ -201,7 +201,7 @@ la huella coincide con el documento firmado.
 - **RF-02a**: Si el documento es de los que la ley obliga a hacer por escritura pública (por
   ejemplo, los que adquieren, modifican o extinguen derechos reales sobre inmuebles), aparece
   un cartel que explica que el producto no los puede otorgar, y el solicitante decide si
-  sigue (decisión 24). *Código Civil y Comercial, arts. 285 y 1017.*
+  sigue (decisión 24). El producto lo detecta por el texto del documento (decisión 41). *Código Civil y Comercial, arts. 285 y 1017.*
 
 **Los destinatarios**
 
@@ -231,9 +231,10 @@ la huella coincide con el documento firmado.
   su orden, canal e identidad, y los campos. Puede escribir un mensaje para los destinatarios.
 - **RF-09a**: Antes de enviar, el solicitante puede tildar «Pedir revisión» y elegir a uno o
   más miembros del estudio como revisores (decisión 28). Cada revisor aprueba o devuelve el
-  pedido con un comentario. Cuando todos aprueban, el pedido sale solo; si uno lo devuelve,
+  pedido con un comentario, que es obligatorio para devolverlo (decisión 41). Cuando todos aprueban, el pedido sale solo; si uno lo devuelve,
   vuelve al solicitante como borrador, con el comentario.
-- **RF-10**: El solicitante elige cuándo vence el pedido (decisión 22).
+- **RF-10**: El solicitante elige cuándo vence el pedido (decisión 22). Por defecto vence a los
+  14 días, salvo que el estudio fije otro plazo (decisión 41).
 - **RF-11**: El producto manda recordatorios automáticos a los firmantes que todavía no
   firmaron (decisión 22). El solicitante puede, además, mandar un recordatorio cuando quiera.
 - **RF-12**: Un pedido a medio preparar queda guardado como borrador, y el solicitante lo puede
@@ -245,7 +246,8 @@ la huella coincide con el documento firmado.
   crear cuenta. El enlace es personal: lleva solo a lo que le toca a ese firmante (decisión
   12).
 - **RF-14**: Si el solicitante eligió una forma de identidad, el firmante la pasa antes de ver
-  el documento.
+  el documento. Un código de identidad admite 3 intentos; después, el acceso al pedido se
+  bloquea 15 minutos (decisión 41).
 - **RF-15**: El firmante ve el documento completo, puede descargar una copia, y el producto lo
   lleva de un campo pendiente al siguiente.
 - **RF-16**: El firmante elige firmar con firma digital o con firma electrónica. Con firma
@@ -265,7 +267,8 @@ la huella coincide con el documento firmado.
   puede firmar, se avisa al solicitante y se le ofrece reenviarlo. Reenviar arma un pedido
   nuevo con el mismo documento, destinatarios y campos, que se puede cambiar antes de enviar
   (decisión 17).
-- **RF-21**: El solicitante puede cancelar un pedido que espera firmas. Se avisa a los firmantes
+- **RF-21**: El solicitante puede cancelar un pedido que espera firmas, después de confirmarlo
+  (decisión 41). Se avisa a los firmantes
   que ya lo habían recibido.
 - **RF-22**: Cuando firma el último firmante, el pedido pasa a Completado y el solicitante y
   todos los destinatarios reciben el documento firmado y la constancia.

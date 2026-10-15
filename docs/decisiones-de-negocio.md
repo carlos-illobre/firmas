@@ -97,3 +97,11 @@ Lo que todavía no está decidido está en
     panel de firma a la derecha, con lo que ya hizo, lo que le falta y la elección entre
     firma digital y electrónica; en el celular, el panel es una hoja plegable abajo. Las
     demás pantallas siguen ese estilo.
+41. **Maquetas aprobadas.** Todas las pantallas de las capacidades 001 a 007, con estos
+    detalles: el cartel de escritura pública aparece cuando el producto lo detecta por el
+    texto del documento; para devolver un pedido en revisión el comentario es obligatorio;
+    el código de identidad admite 3 intentos y después bloquea el acceso 15 minutos; los
+    pedidos vencen por defecto a los 14 días, que el estudio puede cambiar; la contraseña
+    tiene al menos 10 caracteres; cancelar un pedido pide confirmación; el menú dice
+    «Historial» en vez de «Actividad»; «Firmas» es el nombre provisorio; y el ingreso a la
+    Firma Digital Remota se confirma en el paso 3.

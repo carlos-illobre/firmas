@@ -6,7 +6,7 @@
 
 **Status**: Aprobada (2026-10-15)
 
-**Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
+**Maquetas**: Aprobadas (2026-10-15, decisiones 40 y 41); ver [ux.md](ux.md)
 
 **Input**: Decisiones 18, 36, 37 y 38 de Carlos (2026-10-15): la pantalla de Configuración del diseño de
 Figma está en la primera versión. Decisión 6: por ahora nadie paga.
@@ -92,7 +92,7 @@ nuevo los trae.
 - **RF-64**: El producto no se conecta con otros servicios, salvo los mínimos necesarios
   para funcionar: el envío de correos, de WhatsApp y de SMS, la validación de identidad, y la
   firma digital (decisión 37). No hay una sección de integraciones.
-- **RNF-10**: Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se
+- **RNF-10**: Las contraseñas tienen al menos 10 caracteres (decisión 41), no se guardan en claro y los intentos de ingreso fallidos se
   limitan.
 
 ### Key Entities *(include if feature involves data)*

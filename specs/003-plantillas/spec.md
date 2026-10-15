@@ -6,7 +6,7 @@
 
 **Status**: Aprobada (2026-10-15)
 
-**Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
+**Maquetas**: Aprobadas (2026-10-15, decisiones 40 y 41); ver [ux.md](ux.md)
 
 **Input**: Decisiones 11 y 32 de Carlos (2026-10-15): un documento también se empieza con una
 plantilla del estudio o desde cero. Decisión 18: la pantalla de Plantillas del diseño de

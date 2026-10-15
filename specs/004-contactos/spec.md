@@ -6,7 +6,7 @@
 
 **Status**: Aprobada (2026-10-15)
 
-**Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
+**Maquetas**: Aprobadas (2026-10-15, decisiones 40 y 41); ver [ux.md](ux.md)
 
 **Input**: Decisiones 18 y 33 de Carlos (2026-10-15): la pantalla de Contactos del diseño de Figma
 está en la primera versión.

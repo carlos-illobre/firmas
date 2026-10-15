@@ -27,4 +27,5 @@ Registro e ingreso, equipo con roles, seguridad, avisos, preferencias, integraci
 
 ## Estado de la especificación
 
-Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39).
+Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39). Maquetas aprobadas el
+mismo día (decisiones 40 y 41): [ux.md](ux.md) y [maquetas/](maquetas/).

@@ -23,7 +23,7 @@ el mercado argentino y para el trabajo de un estudio jurídico. Qué es y para q
 
 ## Requerimientos
 
-Especificaciones aprobadas por Carlos el 2026-10-15. Falta el paso 2: las maquetas.
+Especificaciones y maquetas aprobadas por Carlos el 2026-10-15. Sigue el paso 3: la arquitectura.
 
 ### 001 · Pedido de firma
 

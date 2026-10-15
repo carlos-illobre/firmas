@@ -21,8 +21,8 @@ terminarla se marca `[x]`; no se borra.
   que las anota en docs/decisiones-de-negocio.md.
 - [x] T003 [agente] [alta] Especificar la primera capacidad: paso 1, con /speckit-specify y /speckit-clarify (depende de T002)
 - [x] T004 [carlos] [alta] Aprobar la especificación de la primera capacidad (depende de T003)
-- [ ] T005 [agente] [en curso] Maquetas de la primera capacidad: paso 2, con /ux (depende de T004)
-- [ ] T006 [carlos] Elegir y aprobar las maquetas (depende de T005)
+- [x] T005 [agente] Maquetas de la primera capacidad: paso 2, con /ux (depende de T004)
+- [x] T006 [carlos] Elegir y aprobar las maquetas (depende de T005)
 - [ ] T007 [agente] Arquitectura: stack, alojamiento y proveedores de firma e identidad, con un ADR cada uno (depende de T004)
 - [ ] T008 [carlos] Crear el entorno de la nube `firmas` (depende de T007)
   Cómo, en docs/operacion/sesiones-en-la-nube.md. Hace falta recién cuando haya código.
