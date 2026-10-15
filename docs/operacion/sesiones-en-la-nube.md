@@ -16,10 +16,40 @@ lado ni copiarlo al repositorio).
 
 ## El entorno `firmas`
 
-Mientras no haya código, alcanza con el entorno por defecto: lo único que corre son las dos
-herramientas de `tests/`, con Node. Cuando el paso 3 elija el stack, se crea el entorno
-`firmas` con **Add cloud environment** y se escribe acá: acceso a internet, variables y
-script de preparación, con las versiones fijadas.
+Lo único que corre hoy son las dos herramientas de `tests/`, con Node. Cuando el paso 3
+elija el stack, se escribe acá lo que falte: acceso a internet, variables y versiones.
+
+### Script de preparación
+
+Carlos lo agregó al entorno el 2026-10-15. Corre al arrancar cada sesión nueva; una sesión
+que ya estaba abierta no lo corre.
+
+```bash
+#!/bin/bash
+set -e
+npm install -g pnpm@10.15.0
+npx -y playwright@1.63.0 install --with-deps chromium
+```
+
+- **pnpm 10.15.0**, para instalar las dependencias cuando haya código.
+- **Playwright 1.63.0 con su Chromium**, para las capturas de computadora y de celular que
+  verifican lo visual, y para leer las maquetas de Lovable y Figma. La imagen de la nube ya
+  trae otro Playwright y otro Chromium (en `/opt/pw-browsers`, con
+  `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1`); el de 1.63.0 es el que vale para el proyecto.
+
+Si una sesión necesita estas herramientas y el script no corrió, el agente corre esas dos
+líneas.
+
+### Dominios
+
+Además de los del entorno por defecto, Carlos fue habilitando estos, por pedido de una
+sesión:
+
+| Dominio | Para qué |
+|---|---|
+| `lovable.dev` y `*.lovable.app` | Leer la maqueta de Lovable |
+| `*.figma.site` | Leer el diseño de Figma |
+| `argentina.gob.ar` y `boletinoficial.gob.ar` | Verificar las normas que citan las reglas jurídicas |
 
 ## Las skills
 
