@@ -52,3 +52,13 @@ Lo que todavía no está decidido está en
 18. **Lo mínimo de la primera versión.** Todas las pantallas de las maquetas: Inicio,
     Documentos, Nuevo documento, el detalle de un documento, Plantillas, Contactos,
     Tareas, Actividad, Configuración y la vista del firmante.
+19. **Cómo se usa el certificado.** Se aceptan las tres formas: subir el archivo del
+    certificado, usar el token del firmante y firmar con la Plataforma de Firma Digital
+    Remota.
+20. **Quién elige cómo se comprueba la identidad.** Quien envía, para cada firmante.
+21. **El canal.** Lo elige quien envía: el correo u otro medio que elija.
+22. **Vencimiento y recordatorios.** Quien envía elige cuándo vence el pedido. Hay
+    recordatorios automáticos.
+23. **La constancia.** Al terminar se genera una constancia de lo que pasó: quién firmó,
+    cuándo, desde dónde, con qué forma de identidad y la huella del documento, pensada para
+    presentarla en un juicio.

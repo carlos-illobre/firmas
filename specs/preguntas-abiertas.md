@@ -13,53 +13,44 @@ pregunta, no reglas: la regla se escribe con la norma verificada (constitución,
 ## El valor de la firma
 
 Decidido: quien tiene certificado de firma digital lo ingresa y firma con él; quien no,
-firma con firma electrónica (decisión 5).
+firma con firma electrónica (decisión 5), de cualquiera de las tres formas (decisión 19).
 
-1. Para la firma digital: ¿el certificado se ingresa como archivo, se usa con el token del
-   firmante o se conecta con la Plataforma de Firma Digital Remota? ¿Se aceptan los tres?
-2. ¿Hay documentos que el producto no debe aceptar porque la ley exige otra forma (por
+1. ¿Hay documentos que el producto no debe aceptar porque la ley exige otra forma (por
    ejemplo, los que requieren escritura pública)? ¿Se avisa o se bloquea?
 
 ## Para quién y para qué
 
 Decidido: los firmantes no necesitan cuenta; firman desde el correo (decisión 12).
 
-3. ¿Se firman escritos para presentar en un expediente judicial electrónico (PJN, SCBA u
+2. ¿Se firman escritos para presentar en un expediente judicial electrónico (PJN, SCBA u
    otras jurisdicciones)? ¿Se integra con esos sistemas o el abogado sube el documento él?
-4. ¿Qué tiene que tener que no tenga DocuSign para que un abogado argentino lo elija, además
+3. ¿Qué tiene que tener que no tenga DocuSign para que un abogado argentino lo elija, además
    de ser más lindo y más usable?
 
 ## Identidad y prueba
 
 Decidido: para la firma electrónica están todas las formas de comprobar la identidad
-(decisión 13).
+(decisión 13), y quien envía elige cuál para cada firmante (decisión 20). Al terminar
+se genera una constancia para presentar en un juicio (decisión 23).
 
-5. ¿Quién elige la forma de comprobar la identidad: quien envía, para cada firmante, o el
-   firmante?
-6. ¿Qué tiene que decir la constancia de lo que pasó (quién, cuándo, desde dónde, qué
-   versión del documento) y para qué se usa: para presentarla en un juicio?
-7. ¿Cuánto tiempo se guardan los documentos firmados y las constancias, y quién puede
+4. ¿Cuánto tiempo se guardan los documentos firmados y las constancias, y quién puede
    pedirlos después?
 
 ## Recorrido
 
-Decidido: PDF o Word, que se convierte a PDF (decisión 14); el orden de firma lo elige quien
-envía (decisión 15); si alguien rechaza o el pedido vence, se cancela, se avisa y se puede
-reenviar (decisión 17).
-
-8. ¿Quién elige el canal del pedido de firma, y entre cuáles: correo, WhatsApp, SMS? El
-   correo, ¿va siempre?
-9. ¿Cuánto tarda en vencer un pedido? ¿Lo elige quien envía? ¿Hay recordatorios
-   automáticos, como los que muestra la maqueta?
+Todo decidido: PDF o Word, que se convierte a PDF (decisión 14); el orden de firma lo elige
+quien envía (decisión 15); si alguien rechaza o el pedido vence, se cancela, se avisa y se
+puede reenviar (decisión 17). Quien envía elige el canal (decisión 21) y el vencimiento, y
+hay recordatorios automáticos (decisión 22).
 
 ## Negocio
 
 Decidido: por ahora nadie paga (decisión 6).
 
-10. Cuando se cobre, ¿cómo: por documento, por mes, por usuario? ¿En pesos? ¿Con factura
-    electrónica? ¿Hay un plan gratis?
-11. ¿El nombre del producto es «Firmas» o es solo el del repositorio?
-12. ¿Hay un primer estudio o abogado que lo pruebe? ¿Quién valida que lo jurídico está bien?
+5. Cuando se cobre, ¿cómo: por documento, por mes, por usuario? ¿En pesos? ¿Con factura
+   electrónica? ¿Hay un plan gratis?
+6. ¿El nombre del producto es «Firmas» o es solo el del repositorio?
+7. ¿Hay un primer estudio o abogado que lo pruebe? ¿Quién valida que lo jurídico está bien?
 
 ## Fechas
 
