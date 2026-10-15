@@ -12,8 +12,8 @@ certificado de firma digital firma con él; quien no, con firma electrónica.
 
 ## Para quién
 
-Para el mercado argentino, con foco en abogados. Los firmantes no son necesariamente
-abogados. Por ahora nadie paga.
+Para el mercado argentino, con foco en abogados. Hay dos roles: el **solicitante**, que
+pide la firma, y el **firmante**, que firma y no necesita cuenta ni ser abogado. Por ahora nadie paga.
 
 ## Por qué
 

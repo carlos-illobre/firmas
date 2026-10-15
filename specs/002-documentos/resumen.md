@@ -13,9 +13,10 @@ Inicio ordena el trabajo del día; la lista y el detalle siguen cada pedido de l
 | RF-35 | La lista se filtra por estado (todos, esperando mi acción, esperando a otros, completados,… |
 | RF-36 | Un buscador en todas las pantallas encuentra documentos, clientes y plantillas por nombre |
 | RF-37 | El detalle de un documento muestra el nombre, el estado, el tipo, el cliente, el… |
-| RF-38 | Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de firma |
+| RF-38 | Desde el detalle se puede recordar, descargar, archivar, cancelar el proceso de firma y… |
+| RF-38a | El editor cambia todo lo referente a la firma de un pedido: los destinatarios, el orden, el… |
 | RF-39 | Un documento se puede archivar y desarchivar; archivado no aparece en «Todos» |
-| RF-40 | Cada documento tiene un cliente, un responsable del estudio y etiquetas opcionales |
+| RF-40 | Cada documento tiene uno o más firmantes y un responsable del estudio; el cliente y las… |
 | RNF-05 | Inicio, la lista y el detalle se usan completos en el celular y en la computadora |
 
 ## Lo que más pesa
@@ -23,11 +24,13 @@ Inicio ordena el trabajo del día; la lista y el detalle siguen cada pedido de l
 - Inicio cuenta y lista lo que requiere atención.
 - La lista filtra por estado y por cliente; el buscador está en todas las pantallas.
 - Archivar saca un documento de «Todos».
+- El cliente es opcional; los firmantes, no.
+- El editor cambia lo de la firma, salvo lo de quien ya firmó.
 
 ## Decisiones de Carlos
 
-18 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
+18, 30 y 31 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
 ## Lo que frena la aprobación
 
-- Las preguntas de esta capacidad en [preguntas-abiertas.md](../preguntas-abiertas.md).
+Nada: espera la aprobación de Carlos, con sus supuestos.

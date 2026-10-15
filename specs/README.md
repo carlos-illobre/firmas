@@ -30,15 +30,17 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | ID | Requerimiento | Especificación |
 |---|---|---|
 | RF-01 | Se empieza subiendo un archivo, con una plantilla o desde cero | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-02 | PDF o Word; el Word se convierte a PDF y se firma el PDF | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-02 | PDF o Word de hasta 50 MB; el Word se convierte a PDF y se firma el PDF | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-02a | Cartel si el contrato exige escritura pública; el solicitante decide | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-03 | Destinatarios con nombre, correo y teléfono; firman o reciben copia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-04 | Orden de firma: uno después del otro o todos a la vez | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-05 | Forma de identidad por firmante: correo, SMS, WhatsApp, DNI o RENAPER | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-06 | Canal por destinatario: correo u otro medio | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-05 | Una o dos formas de identidad por firmante: correo, SMS, WhatsApp, DNI o RENAPER | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-06 | Canal por destinatario: correo o WhatsApp | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-07 | Campos ubicados en el documento, con el color de cada firmante | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-08 | Cada firmante, al menos un campo de firma | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-09 | Resumen y mensaje antes de enviar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-10 | Vencimiento elegido por el remitente | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-09a | Revisión opcional por miembros del estudio antes de enviar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-10 | Vencimiento elegido por el solicitante | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-11 | Recordatorios automáticos y a pedido | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-12 | Borradores | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-13 | Enlace personal en el mensaje, sin cuenta | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -47,9 +49,9 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | RF-16 | Firma digital (archivo, token o firma remota) o electrónica (botón) | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-17 | Rechazar con motivo | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-18 | En orden, cada uno recibe al firmar el anterior | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-19 | Estados del pedido | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-19 | Estados del pedido, con «En revisión» | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-20 | Rechazo o vencimiento: se cancela, se avisa, se puede reenviar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-21 | El remitente puede cancelar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-21 | El solicitante puede cancelar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-22 | Al completarse, todos reciben el documento firmado y la constancia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-23 | Qué dice la constancia | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-24 | Registro de eventos que no se puede borrar | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -57,7 +59,7 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | RF-26 | Firma digital válida: certificado vigente, verificable y de certificador licenciado | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-27 | La firma digital equivale a la de puño y letra y presume autoría e integridad | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-28 | La firma electrónica se prueba si se la desconoce: la constancia junta esa prueba | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
-| RF-29 | El remitente ve qué vale cada firma | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
+| RF-29 | El solicitante ve qué vale cada firma | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RF-30 | La firma remota es firma digital, con posibles aranceles | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-01 | Celular y computadora | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
 | RNF-02 | Solo ven el documento quienes corresponde | [001-pedido-de-firma](001-pedido-de-firma/spec.md) |
@@ -75,9 +77,10 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | RF-35 | La lista se filtra por estado (todos, esperando mi acción, esperando a otros, completados,… | [002-documentos](002-documentos/spec.md) |
 | RF-36 | Un buscador en todas las pantallas encuentra documentos, clientes y plantillas por nombre | [002-documentos](002-documentos/spec.md) |
 | RF-37 | El detalle de un documento muestra el nombre, el estado, el tipo, el cliente, el… | [002-documentos](002-documentos/spec.md) |
-| RF-38 | Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de firma | [002-documentos](002-documentos/spec.md) |
+| RF-38 | Desde el detalle se puede recordar, descargar, archivar, cancelar el proceso de firma y… | [002-documentos](002-documentos/spec.md) |
+| RF-38a | El editor cambia todo lo referente a la firma de un pedido: los destinatarios, el orden, el… | [002-documentos](002-documentos/spec.md) |
 | RF-39 | Un documento se puede archivar y desarchivar; archivado no aparece en «Todos» | [002-documentos](002-documentos/spec.md) |
-| RF-40 | Cada documento tiene un cliente, un responsable del estudio y etiquetas opcionales | [002-documentos](002-documentos/spec.md) |
+| RF-40 | Cada documento tiene uno o más firmantes y un responsable del estudio; el cliente y las… | [002-documentos](002-documentos/spec.md) |
 | RNF-05 | Inicio, la lista y el detalle se usan completos en el celular y en la computadora | [002-documentos](002-documentos/spec.md) |
 
 ### 003 · Plantillas y documentos desde cero
@@ -87,7 +90,8 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | RF-41 | Hay plantillas del estudio, con nombre, categoría, texto, datos variables y, opcionalmente,… | [003-plantillas](003-plantillas/spec.md) |
 | RF-42 | Usar una plantilla pide completar sus datos variables y arma el documento del pedido sin… | [003-plantillas](003-plantillas/spec.md) |
 | RF-43 | Las plantillas se listan con su categoría, cuándo y quién la usó por última vez; se filtran… | [003-plantillas](003-plantillas/spec.md) |
-| RF-44 | Se pueden crear, editar y borrar plantillas | [003-plantillas](003-plantillas/spec.md) |
+| RF-44 | El solicitante crea, edita y borra plantillas | [003-plantillas](003-plantillas/spec.md) |
+| RF-44a | El producto trae modelos base, que cualquier estudio usa o copia para hacer su plantilla:… | [003-plantillas](003-plantillas/spec.md) |
 | RF-45 | Se puede redactar un documento desde cero en el producto, con formato básico (títulos,… | [003-plantillas](003-plantillas/spec.md) |
 | RNF-06 | Usar una plantilla funciona en el celular y en la computadora | [003-plantillas](003-plantillas/spec.md) |
 
@@ -96,11 +100,11 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 | ID | Requerimiento | Especificación |
 |---|---|---|
 | RF-46 | Hay contactos de dos clases: personas y organizaciones | [004-contactos](004-contactos/spec.md) |
-| RF-47 | De una persona se guarda nombre y apellido, correo y teléfono; de una organización, su nombre | [004-contactos](004-contactos/spec.md) |
+| RF-47 | De una persona se guarda nombre, apellido y correo; y, si se tienen, celular, DNI, CUIT o… | [004-contactos](004-contactos/spec.md) |
 | RF-48 | La lista de contactos muestra, de cada uno, cuántos documentos tiene asociados y cuántos… | [004-contactos](004-contactos/spec.md) |
 | RF-49 | Al cargar destinatarios en un pedido se sugieren los contactos guardados | [004-contactos](004-contactos/spec.md) |
 | RF-50 | Los contactos se crean, editan y borran | [004-contactos](004-contactos/spec.md) |
-| RNF-07 | Datos personales: solo los necesarios y protegidos (ley 25.326, arts. 4 y 9) | [004-contactos](004-contactos/spec.md) |
+| RNF-07 | Los datos de los contactos son datos personales: se guardan solo los necesarios, ciertos y… | [004-contactos](004-contactos/spec.md) |
 
 ### 005 · Tareas y vencimientos
 
@@ -118,18 +122,18 @@ Todos en borrador: esperan la aprobación de Carlos (paso 1).
 |---|---|---|
 | RF-55 | El historial muestra los eventos de la capacidad 001 y los del estudio (descargas, cambios… | [006-actividad](006-actividad/spec.md) |
 | RF-56 | Se filtra por período, por participante y por acción | [006-actividad](006-actividad/spec.md) |
-| RF-57 | Se exporta lo filtrado | [006-actividad](006-actividad/spec.md) |
+| RF-57 | Se exporta lo filtrado, en CSV | [006-actividad](006-actividad/spec.md) |
 | RNF-09 | Nadie puede borrar ni cambiar un evento, tampoco un administrador | [006-actividad](006-actividad/spec.md) |
 
 ### 007 · Cuentas, equipo y configuración
 
 | ID | Requerimiento | Especificación |
 |---|---|---|
-| RF-58 | Un abogado se registra con nombre, correo y contraseña, crea su estudio, confirma su… | [007-configuracion](007-configuracion/spec.md) |
-| RF-59 | El administrador invita colaboradores por correo, les asigna un rol, se lo cambia y les… | [007-configuracion](007-configuracion/spec.md) |
+| RF-58 | El registro es libre | [007-configuracion](007-configuracion/spec.md) |
+| RF-59 | Cualquier miembro del estudio invita a otros por correo y les quita el acceso | [007-configuracion](007-configuracion/spec.md) |
 | RF-60 | La seguridad y autenticación del estudio se configura: métodos de acceso y políticas | [007-configuracion](007-configuracion/spec.md) |
 | RF-61 | Cada usuario elige qué avisos recibe | [007-configuracion](007-configuracion/spec.md) |
 | RF-62 | El estudio fija las preferencias de los documentos: formato de fecha, recordatorios y… | [007-configuracion](007-configuracion/spec.md) |
 | RF-63 | El estudio guarda sus datos: nombre, logo e información de contacto | [007-configuracion](007-configuracion/spec.md) |
-| RF-64 | El estudio conecta integraciones con herramientas propias | [007-configuracion](007-configuracion/spec.md) |
+| RF-64 | El producto no se conecta con otros servicios, salvo los mínimos necesarios para funcionar:… | [007-configuracion](007-configuracion/spec.md) |
 | RNF-10 | Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se limitan | [007-configuracion](007-configuracion/spec.md) |

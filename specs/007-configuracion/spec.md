@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Decisión 18 de Carlos (2026-10-15): la pantalla de Configuración del diseño de
+**Input**: Decisiones 18, 36, 37 y 38 de Carlos (2026-10-15): la pantalla de Configuración del diseño de
 Figma está en la primera versión. Decisión 6: por ahora nadie paga.
 
 <!-- Cada escenario de aceptación lleva un número que no se repite en este archivo. -->
@@ -20,7 +20,7 @@ Figma está en la primera versión. Decisión 6: por ahora nadie paga.
 Un abogado crea su cuenta y la de su estudio, e ingresa al producto. Los firmantes no
 necesitan cuenta (decisión 12).
 
-**Why this priority**: sin cuenta no hay remitente.
+**Why this priority**: sin cuenta no hay solicitante.
 
 **Independent Test**: crear una cuenta, salir y volver a entrar.
 
@@ -35,20 +35,19 @@ necesitan cuenta (decisión 12).
 
 ### User Story 2 - Armar el equipo (Priority: P1)
 
-El administrador del estudio invita a colaboradores y les da un rol que dice qué pueden
-hacer y ver.
+Un miembro del estudio invita a sus compañeros. Todos pueden lo mismo.
 
 **Why this priority**: un estudio trabaja en equipo, y los documentos tienen secreto
 profesional.
 
-**Independent Test**: invitar a un colaborador, que acepte, y comprobar que ve lo que su rol
-permite.
+**Independent Test**: invitar a un compañero, que acepte, y comprobar que ve los documentos
+del estudio.
 
 **Acceptance Scenarios**:
 
-1. **E03** **Given** un administrador, **When** invita a un colaborador por correo con un
-   rol, **Then** el colaborador recibe la invitación y, al aceptarla, entra al estudio.
-2. **E04** **Given** un colaborador al que se le quita el acceso, **When** intenta entrar,
+1. **E03** **Given** un miembro del estudio, **When** invita a un compañero por correo,
+   **Then** el compañero recibe la invitación y, al aceptarla, entra al estudio.
+2. **E04** **Given** un miembro al que se le quita el acceso, **When** intenta entrar,
    **Then** ya no puede ver nada del estudio.
 
 ---
@@ -56,8 +55,8 @@ permite.
 ### User Story 3 - Ajustar el producto (Priority: P2)
 
 El estudio configura la seguridad de acceso, qué avisos recibe cada uno, las preferencias de
-los documentos (formato de fecha, recordatorios y forma de firma predeterminados), las
-integraciones y sus datos.
+los documentos (formato de fecha, recordatorios y forma de firma predeterminados) y sus
+datos.
 
 **Why this priority**: tiene valores razonables por defecto; se ajusta después.
 
@@ -73,32 +72,34 @@ nuevo los trae.
 
 ### Edge Cases
 
-- El último administrador no se puede quitar a sí mismo.
+- El último miembro de un estudio no se puede quitar a sí mismo.
 - Una invitación vencida o ya usada.
 
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
 
-- **RF-58**: Un abogado se registra con nombre, correo y contraseña, crea su estudio,
+- **RF-58**: El registro es libre (decisión 38). Un abogado se registra con nombre, correo y contraseña, crea su estudio,
   confirma su correo, entra y sale, y recupera la contraseña.
-- **RF-59**: El administrador invita colaboradores por correo, les asigna un rol, se lo
-  cambia y les quita el acceso.
+- **RF-59**: Cualquier miembro del estudio invita a otros por correo y les quita el acceso.
+  Dentro del estudio no hay roles: todos pueden lo mismo (decisión 36).
 - **RF-60**: La seguridad y autenticación del estudio se configura: métodos de acceso y
   políticas.
 - **RF-61**: Cada usuario elige qué avisos recibe.
 - **RF-62**: El estudio fija las preferencias de los documentos: formato de fecha,
   recordatorios y vencimiento predeterminados, y forma de firma predeterminada.
 - **RF-63**: El estudio guarda sus datos: nombre, logo e información de contacto.
-- **RF-64**: El estudio conecta integraciones con herramientas propias.
+- **RF-64**: El producto no se conecta con otros servicios, salvo los mínimos necesarios
+  para funcionar: el envío de correos, de WhatsApp y de SMS, la validación de identidad, y la
+  firma digital (decisión 37). No hay una sección de integraciones.
 - **RNF-10**: Las contraseñas no se guardan en claro y los intentos de ingreso fallidos se
   limitan.
 
 ### Key Entities *(include if feature involves data)*
 
-- **Estudio**: nombre, datos, preferencias e integraciones.
-- **Usuario**: nombre, correo, rol, estudio y sus avisos.
-- **Invitación**: correo, rol, quién invitó, vencimiento y si se usó.
+- **Estudio**: nombre, datos y preferencias.
+- **Usuario**: nombre, correo, estudio y sus avisos.
+- **Invitación**: correo, quién invitó, vencimiento y si se usó.
 
 ## Success Criteria *(mandatory)*
 
@@ -108,12 +109,9 @@ nuevo los trae.
 
 ## Assumptions
 
-- Hay dos roles: administrador, que hace todo, y colaborador, que maneja documentos pero no
-  la configuración.
-- Un usuario pertenece a un solo estudio.
+Supuestos a aprobar:
+
+- Se entra con correo y contraseña, y se puede activar un segundo factor por código.
+- Un usuario pertenece a un solo estudio. Quien se registra sin invitación crea un estudio
+  nuevo.
 - «Facturación y plan» no está en la primera versión, porque nadie paga (decisión 6).
-
-## Preguntas
-
-- [NEEDS CLARIFICATION: las preguntas de «007 · Configuración» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]

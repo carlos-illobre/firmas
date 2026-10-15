@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Decisión 18 de Carlos (2026-10-15): la pantalla de Contactos del diseño de Figma
+**Input**: Decisiones 18 y 33 de Carlos (2026-10-15): la pantalla de Contactos del diseño de Figma
 está en la primera versión.
 
 <!-- Cada escenario de aceptación lleva un número que no se repite en este archivo. -->
@@ -48,8 +48,10 @@ pedido y ver el documento asociado.
 
 - **RF-46**: Hay contactos de dos clases: personas y organizaciones. Una persona puede
   pertenecer a una organización.
-- **RF-47**: De una persona se guarda nombre y apellido, correo y teléfono; de una
-  organización, su nombre.
+- **RF-47**: De una persona se guarda nombre, apellido y correo; y, si se tienen, celular, DNI,
+  CUIT o CUIL, y la organización a la que pertenece. De una organización se guarda la razón
+  social; y, si se tienen, CUIT, correo y teléfono (decisión 33). No se guarda más que eso,
+  porque los datos personales no pueden ser excesivos para lo que se usan.
 - **RF-48**: La lista de contactos muestra, de cada uno, cuántos documentos tiene asociados y
   cuántos pedidos o revisiones están pendientes, y se filtra.
 - **RF-49**: Al cargar destinatarios en un pedido se sugieren los contactos guardados.
@@ -72,10 +74,9 @@ pedido y ver el documento asociado.
 
 ## Assumptions
 
+Supuestos a aprobar:
+
+- El DNI se guarda porque lo usa la validación contra RENAPER, y el CUIT o CUIL porque
+  identifica a quien firma por una organización.
 - Un firmante nuevo de un pedido no se guarda solo como contacto: el abogado elige guardarlo.
 - Los contactos son del estudio, compartidos entre sus miembros.
-
-## Preguntas
-
-- [NEEDS CLARIFICATION: las preguntas de «004 · Contactos» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]

@@ -15,6 +15,10 @@ RF-02:
   estado: "Nuevo: especificación en borrador"
   pruebas: []
   defectos: []
+RF-02a:
+  estado: "Nuevo: especificación en borrador"
+  pruebas: []
+  defectos: []
 RF-03:
   estado: "Nuevo: especificación en borrador"
   pruebas: []
@@ -40,6 +44,10 @@ RF-08:
   pruebas: []
   defectos: []
 RF-09:
+  estado: "Nuevo: especificación en borrador"
+  pruebas: []
+  defectos: []
+RF-09a:
   estado: "Nuevo: especificación en borrador"
   pruebas: []
   defectos: []
@@ -175,6 +183,10 @@ RF-38:
   estado: "Nuevo: especificación en borrador"
   pruebas: []
   defectos: []
+RF-38a:
+  estado: "Nuevo: especificación en borrador"
+  pruebas: []
+  defectos: []
 RF-39:
   estado: "Nuevo: especificación en borrador"
   pruebas: []
@@ -200,6 +212,10 @@ RF-43:
   pruebas: []
   defectos: []
 RF-44:
+  estado: "Nuevo: especificación en borrador"
+  pruebas: []
+  defectos: []
+RF-44a:
   estado: "Nuevo: especificación en borrador"
   pruebas: []
   defectos: []

@@ -62,3 +62,29 @@ Lo que todavía no está decidido está en
 23. **La constancia.** Al terminar se genera una constancia de lo que pasó: quién firmó,
     cuándo, desde dónde, con qué forma de identidad y la huella del documento, pensada para
     presentarla en un juicio.
+24. **Contratos que exigen escritura pública.** Si el documento es de los que la ley obliga
+    a hacer por escritura pública, aparece un cartel que explica la situación, y quien envía
+    decide si sigue.
+25. **Tamaño del archivo.** El mismo que DocuSign: 50 MB por archivo (documentación de
+    DocuSign para desarrolladores, «Rules and limits», consultada el 2026-10-15).
+26. **Canales.** El pedido de firma se manda por correo o por WhatsApp.
+27. **Identidad.** A cada firmante se le puede pedir una o dos formas de comprobar su
+    identidad.
+28. **Revisión antes de enviar.** Si quien envía tilda esa opción, el pedido pasa por una
+    revisión antes de salir.
+29. **Supuestos de la especificación 001.** Aprobados: tipos de campo, nombre escrito como
+    firma electrónica, recordatorios cada tres días, avisos a quien envía, enlace en vez de
+    adjunto y sin delegar la firma.
+30. **«Abrir editor».** Edita todo lo referente a la firma de un documento: la posición de
+    la firma, los campos y lo demás del pedido.
+31. **Cliente.** Un documento puede no tener cliente; lo que siempre tiene es uno o varios
+    firmantes.
+32. **Plantillas.** Las crea quien envía. El producto trae, además, algunos modelos base que
+    propone el agente.
+33. **Datos de los contactos.** Los decide el agente.
+34. **Tareas.** No hay tareas que se creen solas a partir de fechas del contrato.
+35. **Historial.** Se exporta en CSV.
+36. **Roles.** Solo hay dos: quien envía y quien recibe, con nombres del oficio si los hay.
+    No hay roles dentro del estudio.
+37. **Conexiones con otros servicios.** Solo las mínimas necesarias para que funcione.
+38. **Registro.** Libre: cualquiera crea una cuenta.

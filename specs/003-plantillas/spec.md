@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Decisión 11 de Carlos (2026-10-15): un documento también se empieza con una
+**Input**: Decisiones 11 y 32 de Carlos (2026-10-15): un documento también se empieza con una
 plantilla del estudio o desde cero. Decisión 18: la pantalla de Plantillas del diseño de
 Figma está en la primera versión.
 
@@ -90,7 +90,11 @@ que el PDF que se firma tiene ese texto.
   pedido sin cambiar la plantilla.
 - **RF-43**: Las plantillas se listan con su categoría, cuándo y quién la usó por última vez;
   se filtran por categoría y se marcan como favoritas.
-- **RF-44**: Se pueden crear, editar y borrar plantillas.
+- **RF-44**: El solicitante crea, edita y borra plantillas (decisión 32).
+- **RF-44a**: El producto trae modelos base, que cualquier estudio usa o copia para hacer su
+  plantilla: acuerdo de confidencialidad, contrato de locación de servicios, convenio de
+  honorarios profesionales, acuerdo de pago y autorización de uso de imagen (decisión 32).
+  Cada modelo base dice que es un punto de partida, que el abogado revisa antes de usarlo.
 - **RF-45**: Se puede redactar un documento desde cero en el producto, con formato básico
   (títulos, negrita, listas), que se convierte a PDF para firmar.
 - **RNF-06**: Usar una plantilla funciona en el celular y en la computadora.
@@ -110,11 +114,9 @@ que el PDF que se firma tiene ese texto.
 
 ## Assumptions
 
-- La maqueta aclara que sus plantillas son ejemplos ficticios: el producto no trae modelos
-  jurídicos propios; cada estudio carga los suyos.
+Supuestos a aprobar:
+
+- El texto de los modelos base se escribe antes de lanzar, y lo valida un abogado (riesgo
+  R-01).
+- Las plantillas son del estudio: las ven y las usan todos sus miembros.
 - Una plantilla se crea escribiendo su texto en el producto o subiendo un Word.
-
-## Preguntas
-
-- [NEEDS CLARIFICATION: las preguntas de «003 · Plantillas» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]

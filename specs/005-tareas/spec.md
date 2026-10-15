@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Decisión 18 de Carlos (2026-10-15): la pantalla de Tareas del diseño de Figma está
+**Input**: Decisiones 18 y 34 de Carlos (2026-10-15): la pantalla de Tareas del diseño de Figma está
 en la primera versión.
 
 <!-- Cada escenario de aceptación lleva un número que no se repite en este archivo. -->
@@ -67,9 +67,5 @@ las asigna a sí mismo o a otro miembro del estudio, y las ve en lista o en cale
 
 ## Assumptions
 
-- Las tareas las crea el abogado; el producto no crea tareas solo.
-
-## Preguntas
-
-- [NEEDS CLARIFICATION: las preguntas de «005 · Tareas» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]
+Decidido: las tareas las crea el abogado; el producto no crea tareas a partir de fechas del
+contrato (decisión 34).

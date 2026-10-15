@@ -14,12 +14,12 @@ Tareas del estudio, en lista o calendario, vinculadas a documentos y clientes. D
 
 ## Lo que más pesa
 
-- Las tareas las crea el abogado (supuesto).
+- Las tareas las crea el abogado; ninguna se crea sola.
 
 ## Decisiones de Carlos
 
-18 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
+18 y 34 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
 ## Lo que frena la aprobación
 
-- Las preguntas de esta capacidad en [preguntas-abiertas.md](../preguntas-abiertas.md).
+Nada: espera la aprobación de Carlos, con sus supuestos.

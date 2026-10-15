@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Decisión 18 de Carlos (2026-10-15): la pantalla de Actividad del diseño de Figma
+**Input**: Decisiones 18 y 35 de Carlos (2026-10-15): la pantalla de Actividad del diseño de Figma
 está en la primera versión. Decisión 23: lo que pasa en cada pedido tiene que poder probarse.
 
 <!-- Cada escenario de aceptación lleva un número que no se repite en este archivo. -->
@@ -48,7 +48,7 @@ exportar, y comprobar que están los dos eventos.
   (descargas, cambios de destinatarios, miembros agregados), agrupados por día, con hora al
   segundo, documento y resultado.
 - **RF-56**: Se filtra por período, por participante y por acción.
-- **RF-57**: Se exporta lo filtrado.
+- **RF-57**: Se exporta lo filtrado, en CSV (decisión 35).
 - **RNF-09**: Nadie puede borrar ni cambiar un evento, tampoco un administrador.
 
 ### Key Entities *(include if feature involves data)*
@@ -63,10 +63,6 @@ exportar, y comprobar que están los dos eventos.
 
 ## Assumptions
 
-- Se exporta en PDF y en CSV.
+Supuesto a aprobar:
+
 - Cada abogado ve los eventos de los documentos que puede ver.
-
-## Preguntas
-
-- [NEEDS CLARIFICATION: las preguntas de «006 · Actividad» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]

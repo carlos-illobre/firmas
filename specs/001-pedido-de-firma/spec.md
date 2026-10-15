@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Las decisiones de Carlos del 2026-10-15 (5, 7, 8, 11 a 17 y 19 a 23 de
+**Input**: Las decisiones de Carlos del 2026-10-15 (5, 7, 8, 11 a 17, 19 a 29 y 36 de
 [docs/decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md)): un abogado prepara un
 documento, carga a los firmantes, elige cómo firma y se identifica cada uno, y lo envía; cada
 firmante firma desde el correo, con su certificado o con firma electrónica; al terminar
@@ -20,22 +20,24 @@ queda el documento firmado y una constancia de lo que pasó.
 
 ## Palabras
 
-- **Remitente**: el abogado, o cualquier miembro del estudio con cuenta, que prepara y envía
-  el pedido.
+- **Solicitante**: el abogado, o cualquier miembro del estudio con cuenta, que prepara y envía
+  el pedido: quien requiere la firma. Es uno de los dos roles del producto (decisión 36).
 - **Pedido de firma**: un documento con sus destinatarios, el orden, los campos, el
   vencimiento y los recordatorios. Es lo que en DocuSign se llama «sobre».
-- **Destinatario**: cada persona del pedido. Es **firmante** o **recibe copia**. No necesita
-  cuenta (decisión 12).
+- **Destinatario**: cada persona del pedido. Es **firmante** (el otro rol del producto) o
+  **recibe copia**. No necesita cuenta (decisión 12).
+- **Revisor**: un miembro del estudio que aprueba el pedido antes de que salga, si el
+  solicitante pidió revisión (decisión 28).
 - **Firma digital**: la que se hace con un certificado de firma digital del firmante.
 - **Firma electrónica**: la que se hace sin certificado, apretando un botón, después de
-  comprobar la identidad del firmante como eligió el remitente.
+  comprobar la identidad del firmante como eligió el solicitante.
 - **Constancia**: el documento que se genera al terminar, con lo que pasó en el pedido.
 
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Preparar y enviar un pedido de firma (Priority: P1)
 
-El remitente sube un PDF o un Word, carga a los firmantes y a quienes reciben copia, elige
+El solicitante sube un PDF o un Word, carga a los firmantes y a quienes reciben copia, elige
 el orden de firma, ubica los campos de cada firmante en el documento, elige el vencimiento,
 y lo envía. El recorrido tiene cuatro pasos: documento, destinatarios, campos, y revisar y
 enviar.
@@ -47,31 +49,39 @@ que el primer firmante recibe el correo.
 
 **Acceptance Scenarios**:
 
-1. **E01** **Given** un remitente con cuenta, **When** sube un PDF, carga dos firmantes con
+1. **E01** **Given** un solicitante con cuenta, **When** sube un PDF, carga dos firmantes con
    nombre y correo, ubica un campo de firma para cada uno, elige un vencimiento y envía,
    **Then** el pedido queda «Esperando a otros» y los firmantes reciben el pedido por el
    canal elegido.
-2. **E02** **Given** un remitente que sube un Word, **When** pasa al paso de destinatarios,
-   **Then** el documento ya está convertido a PDF, el remitente ve ese PDF y lo que se envía
+2. **E02** **Given** un solicitante que sube un Word, **When** pasa al paso de destinatarios,
+   **Then** el documento ya está convertido a PDF, el solicitante ve ese PDF y lo que se envía
    y se firma es ese PDF (decisión 14).
 3. **E03** **Given** un pedido con orden «uno después del otro», **When** se envía, **Then**
    solo el primer firmante recibe el pedido; cada uno recibe el suyo cuando firma el
    anterior (decisión 15).
 4. **E04** **Given** un pedido con orden «todos a la vez», **When** se envía, **Then** todos
    los firmantes reciben el pedido al mismo tiempo.
-5. **E05** **Given** un firmante sin campo de firma, **When** el remitente quiere enviar,
+5. **E05** **Given** un firmante sin campo de firma, **When** el solicitante quiere enviar,
    **Then** no puede, y se le dice qué firmante no tiene campo.
-6. **E06** **Given** un pedido a medio preparar, **When** el remitente sale del recorrido,
+6. **E06** **Given** un pedido a medio preparar, **When** el solicitante sale del recorrido,
    **Then** queda guardado como «Borrador» y lo puede retomar.
 7. **E07** **Given** un destinatario marcado «recibe copia», **When** se completa el pedido,
    **Then** recibe el documento firmado y la constancia, sin haber tenido que firmar.
+8. **E23** **Given** un documento que es una compraventa de un inmueble, **When** el
+   solicitante lo sube, **Then** ve un cartel que explica que ese contrato exige escritura
+   pública y elige si sigue o no.
+9. **E24** **Given** un archivo de más de 50 MB, **When** el solicitante lo sube, **Then** no
+   se acepta y se le dice el máximo.
+10. **E25** **Given** un pedido con «Pedir revisión» y dos revisores, **When** los dos
+    aprueban, **Then** el pedido sale; **When** uno lo devuelve con un comentario, **Then**
+    vuelve al solicitante como borrador con ese comentario.
 
 ---
 
 ### User Story 2 - Firmar desde el correo (Priority: P1)
 
 El firmante recibe el pedido, aprieta el botón del mensaje y llega al documento sin crear
-una cuenta. Si el remitente eligió una forma de comprobar su identidad, la pasa primero. Lee
+una cuenta. Si el solicitante eligió una forma de comprobar su identidad, la pasa primero. Lee
 el documento, completa sus campos y firma: con su certificado de firma digital, de una de
 tres formas, o con firma electrónica apretando un botón (decisiones 12 y 19).
 
@@ -86,53 +96,55 @@ identidad, firmar con firma electrónica y ver que el pedido avanza.
 1. **E08** **Given** un firmante que recibió el pedido, **When** aprieta el botón del
    mensaje, **Then** ve el documento completo, sin crear cuenta, con sus campos marcados y
    la opción de descargar una copia.
-2. **E09** **Given** un firmante para quien el remitente eligió código por SMS, **When** abre
+2. **E09** **Given** un firmante para quien el solicitante eligió código por SMS, **When** abre
    el pedido, **Then** tiene que ingresar el código que le llegó al teléfono antes de ver el
    documento.
-3. **E10** **Given** un firmante sin certificado, **When** completa sus campos y elige firma
+3. **E26** **Given** un firmante para quien el solicitante eligió código por SMS y foto del
+   DNI, **When** abre el pedido, **Then** tiene que pasar las dos antes de ver el documento.
+4. **E10** **Given** un firmante sin certificado, **When** completa sus campos y elige firma
    electrónica, **Then** firma apretando un botón y el pedido registra la firma con la forma
    de identidad que usó.
-4. **E11** **Given** un firmante con certificado de firma digital, **When** elige firmar con
+5. **E11** **Given** un firmante con certificado de firma digital, **When** elige firmar con
    él, **Then** puede hacerlo subiendo el archivo del certificado, con su token o con la
    Plataforma de Firma Digital Remota, y la firma queda hecha con ese certificado.
-5. **E12** **Given** un firmante con campos obligatorios sin completar, **When** quiere
+6. **E12** **Given** un firmante con campos obligatorios sin completar, **When** quiere
    firmar, **Then** no puede, y el producto lo lleva al próximo campo pendiente.
-6. **E13** **Given** el último firmante, **When** firma, **Then** el pedido pasa a
-   «Completado», y todos los destinatarios y el remitente reciben el documento firmado y la
+7. **E13** **Given** el último firmante, **When** firma, **Then** el pedido pasa a
+   «Completado», y todos los destinatarios y el solicitante reciben el documento firmado y la
    constancia.
 
 ---
 
 ### User Story 3 - Rechazo, vencimiento, recordatorios y cancelación (Priority: P2)
 
-Si un firmante rechaza firmar o el pedido vence, el pedido se cancela, se avisa al remitente
+Si un firmante rechaza firmar o el pedido vence, el pedido se cancela, se avisa al solicitante
 y se le ofrece reenviarlo (decisión 17). Mientras tanto, el producto manda recordatorios
-automáticos (decisión 22), el remitente puede mandar uno cuando quiera, y puede cancelar el
+automáticos (decisión 22), el solicitante puede mandar uno cuando quiera, y puede cancelar el
 pedido.
 
 **Why this priority**: sin esto un pedido puede quedar abierto para siempre, pero el
 recorrido principal funciona sin ello.
 
 **Independent Test**: enviar un pedido, rechazarlo como firmante y comprobar que el
-remitente recibe el aviso y puede reenviarlo.
+solicitante recibe el aviso y puede reenviarlo.
 
 **Acceptance Scenarios**:
 
 1. **E14** **Given** un firmante que abrió el pedido, **When** lo rechaza, **Then** tiene
    que escribir el motivo, el pedido pasa a «Rechazado», nadie más puede firmarlo, y el
-   remitente recibe un aviso con el motivo y la opción de reenviarlo.
+   solicitante recibe un aviso con el motivo y la opción de reenviarlo.
 2. **E15** **Given** un pedido sin completar, **When** llega su vencimiento, **Then** pasa
-   a «Vencido», nadie puede firmarlo, y el remitente recibe un aviso con la opción de
+   a «Vencido», nadie puede firmarlo, y el solicitante recibe un aviso con la opción de
    reenviarlo.
-3. **E16** **Given** un pedido rechazado o vencido, **When** el remitente lo reenvía,
+3. **E16** **Given** un pedido rechazado o vencido, **When** el solicitante lo reenvía,
    **Then** se arma un pedido nuevo con el mismo documento, destinatarios y campos, que puede
    cambiar antes de enviar; el anterior queda como estaba.
 4. **E17** **Given** un pedido esperando firmas, **When** pasa el tiempo de un recordatorio,
    **Then** cada firmante que todavía no firmó y ya recibió el pedido recibe un recordatorio
    por su canal.
-5. **E18** **Given** un pedido esperando firmas, **When** el remitente aprieta «Recordar»,
+5. **E18** **Given** un pedido esperando firmas, **When** el solicitante aprieta «Recordar»,
    **Then** se manda un recordatorio a los firmantes que todavía no firmaron.
-6. **E19** **Given** un pedido esperando firmas, **When** el remitente lo cancela, **Then**
+6. **E19** **Given** un pedido esperando firmas, **When** el solicitante lo cancela, **Then**
    pasa a «Cancelado», nadie puede firmarlo y se avisa a los firmantes que ya lo habían
    recibido.
 
@@ -166,8 +178,8 @@ la huella coincide con el documento firmado.
 
 - El Word no se puede convertir (dañado, protegido con contraseña): se avisa y no se sigue.
 - El PDF está protegido con contraseña o ya trae firmas digitales.
-- Un firmante figura dos veces, o el remitente es también firmante.
-- El correo de un firmante rebota: se avisa al remitente.
+- Un firmante figura dos veces, o el solicitante es también firmante.
+- El correo de un firmante rebota: se avisa al solicitante.
 - Un firmante abre el enlace de un pedido rechazado, vencido, cancelado o que ya firmó.
 - El certificado del firmante está vencido o revocado.
 - Un firmante quiere delegar la firma en otra persona.
@@ -179,30 +191,35 @@ la huella coincide con el documento firmado.
 
 **El documento**
 
-- **RF-01**: El remitente empieza un pedido de tres formas: subiendo un archivo, usando una
+- **RF-01**: El solicitante empieza un pedido de tres formas: subiendo un archivo, usando una
   plantilla del estudio o creando el documento desde cero (decisión 11). Las plantillas y la
   redacción desde cero están en la capacidad 003.
 - **RF-02**: Se pueden subir archivos PDF y Word. Un Word se convierte a PDF antes de seguir;
-  el remitente ve el PDF convertido, y lo que se envía y se firma es ese PDF (decisión 14).
-  El tamaño y la cantidad de páginas máximas son una pregunta abierta.
+  el solicitante ve el PDF convertido, y lo que se envía y se firma es ese PDF (decisión 14).
+  Cada archivo pesa 50 MB como mucho, como en DocuSign (decisión 25); no hay un máximo de
+  páginas.
+- **RF-02a**: Si el documento es de los que la ley obliga a hacer por escritura pública (por
+  ejemplo, los que adquieren, modifican o extinguen derechos reales sobre inmuebles), aparece
+  un cartel que explica que el producto no los puede otorgar, y el solicitante decide si
+  sigue (decisión 24). *Código Civil y Comercial, arts. 285 y 1017.*
 
 **Los destinatarios**
 
-- **RF-03**: El remitente carga cada destinatario con nombre y apellido, correo y, si el
+- **RF-03**: El solicitante carga cada destinatario con nombre y apellido, correo y, si el
   canal o la forma de identidad lo piden, teléfono celular. Marca si es firmante o recibe
   copia. Puede agregarse a sí mismo como firmante.
-- **RF-04**: El remitente elige el orden de firma: uno después del otro, en el orden que
+- **RF-04**: El solicitante elige el orden de firma: uno después del otro, en el orden que
   arma, o todos a la vez (decisión 15).
-- **RF-05**: Para cada firmante, el remitente elige cómo se comprueba su identidad si firma
-  con firma electrónica: correo, código por SMS, código por WhatsApp, foto del DNI o
-  validación contra RENAPER (decisiones 13 y 20).
-- **RF-06**: Para cada destinatario, el remitente elige el canal por el que le llega el
-  pedido: el correo u otro medio (decisión 21). Qué otros medios hay es una pregunta
-  abierta.
+- **RF-05**: Para cada firmante, el solicitante elige una o dos formas de comprobar su
+  identidad si firma con firma electrónica: correo, código por SMS, código por WhatsApp, foto
+  del DNI o validación contra RENAPER (decisiones 13, 20 y 27). Con dos, el firmante pasa
+  las dos.
+- **RF-06**: Para cada destinatario, el solicitante elige el canal por el que le llega el
+  pedido: correo o WhatsApp (decisiones 21 y 26).
 
 **Los campos**
 
-- **RF-07**: El remitente ubica sobre las páginas del documento los campos de cada firmante.
+- **RF-07**: El solicitante ubica sobre las páginas del documento los campos de cada firmante.
   Cada firmante tiene un color propio, y sus campos se ven con ese color
   ([sistema visual](../../docs/sistema-visual.md)).
 - **RF-08**: Cada firmante tiene al menos un campo de firma. Un campo puede ser obligatorio u
@@ -210,12 +227,16 @@ la huella coincide con el documento firmado.
 
 **El envío**
 
-- **RF-09**: Antes de enviar, el remitente ve un resumen: el documento, los destinatarios con
+- **RF-09**: Antes de enviar, el solicitante ve un resumen: el documento, los destinatarios con
   su orden, canal e identidad, y los campos. Puede escribir un mensaje para los destinatarios.
-- **RF-10**: El remitente elige cuándo vence el pedido (decisión 22).
+- **RF-09a**: Antes de enviar, el solicitante puede tildar «Pedir revisión» y elegir a uno o
+  más miembros del estudio como revisores (decisión 28). Cada revisor aprueba o devuelve el
+  pedido con un comentario. Cuando todos aprueban, el pedido sale solo; si uno lo devuelve,
+  vuelve al solicitante como borrador, con el comentario.
+- **RF-10**: El solicitante elige cuándo vence el pedido (decisión 22).
 - **RF-11**: El producto manda recordatorios automáticos a los firmantes que todavía no
-  firmaron (decisión 22). El remitente puede, además, mandar un recordatorio cuando quiera.
-- **RF-12**: Un pedido a medio preparar queda guardado como borrador, y el remitente lo puede
+  firmaron (decisión 22). El solicitante puede, además, mandar un recordatorio cuando quiera.
+- **RF-12**: Un pedido a medio preparar queda guardado como borrador, y el solicitante lo puede
   retomar o borrar.
 
 **La firma**
@@ -223,7 +244,7 @@ la huella coincide con el documento firmado.
 - **RF-13**: Cada firmante recibe un mensaje con un botón que lo lleva a su pedido, sin
   crear cuenta. El enlace es personal: lleva solo a lo que le toca a ese firmante (decisión
   12).
-- **RF-14**: Si el remitente eligió una forma de identidad, el firmante la pasa antes de ver
+- **RF-14**: Si el solicitante eligió una forma de identidad, el firmante la pasa antes de ver
   el documento.
 - **RF-15**: El firmante ve el documento completo, puede descargar una copia, y el producto lo
   lleva de un campo pendiente al siguiente.
@@ -237,15 +258,16 @@ la huella coincide con el documento firmado.
 
 **Cómo termina**
 
-- **RF-19**: Un pedido está en uno de estos estados: Borrador, Esperando a otros, Esperando
-  mi acción (cuando le toca firmar al remitente), Completado, Rechazado, Vencido o Cancelado.
+- **RF-19**: Un pedido está en uno de estos estados: Borrador, En revisión, Esperando a otros,
+  Esperando mi acción (cuando le toca firmar o revisar a quien lo mira), Completado,
+  Rechazado, Vencido o Cancelado.
 - **RF-20**: Si un firmante rechaza o el pedido vence, el pedido se cancela, nadie más lo
-  puede firmar, se avisa al remitente y se le ofrece reenviarlo. Reenviar arma un pedido
+  puede firmar, se avisa al solicitante y se le ofrece reenviarlo. Reenviar arma un pedido
   nuevo con el mismo documento, destinatarios y campos, que se puede cambiar antes de enviar
   (decisión 17).
-- **RF-21**: El remitente puede cancelar un pedido que espera firmas. Se avisa a los firmantes
+- **RF-21**: El solicitante puede cancelar un pedido que espera firmas. Se avisa a los firmantes
   que ya lo habían recibido.
-- **RF-22**: Cuando firma el último firmante, el pedido pasa a Completado y el remitente y
+- **RF-22**: Cuando firma el último firmante, el pedido pasa a Completado y el solicitante y
   todos los destinatarios reciben el documento firmado y la constancia.
 
 **La prueba**
@@ -261,9 +283,9 @@ la huella coincide con el documento firmado.
 
 ### Non-Functional Requirements
 
-- **RNF-01**: Todo el recorrido del remitente y del firmante se usa completo en el celular y
+- **RNF-01**: Todo el recorrido del solicitante y del firmante se usa completo en el celular y
   en la computadora (constitución, principio III).
-- **RNF-02**: Solo el remitente, los miembros del estudio con permiso y los destinatarios del
+- **RNF-02**: Solo el solicitante, los miembros del estudio con permiso y los destinatarios del
   pedido pueden ver el documento: está amparado por el secreto profesional (constitución,
   principio VI). Quién del estudio ve qué se define en la capacidad 007.
 - **RNF-03**: El enlace de un firmante no se puede adivinar y deja de servir cuando el pedido
@@ -289,7 +311,7 @@ Código Civil y Comercial (ley 26.994) en su texto original y el decreto 182/201
   constancia junta la prueba de quién firmó y de que el documento no cambió. *Ley 25.506,
   art. 5; Código Civil y Comercial, arts. 314 y 319, que dejan al juez ponderar la
   confiabilidad de los soportes y de los procedimientos técnicos.*
-- **RF-29**: El producto le dice al remitente, en palabras simples, qué vale cada firma: la
+- **RF-29**: El producto le dice al solicitante, en palabras simples, qué vale cada firma: la
   digital equivale a la de puño y letra; la electrónica vale como prueba, que hay que
   sostener si se la desconoce. *Ley 25.506, arts. 3 y 5.*
 - **RF-30**: La firma digital remota es una firma digital: el certificado lo guarda la
@@ -304,12 +326,9 @@ y 1017.* Qué hace el producto con ellos es una pregunta abierta.
 Qué tiene que tener la constancia más allá de lo anterior, y cuánto tiempo se guarda, no
 tiene una norma identificada: es una pregunta abierta.
 
-- [NEEDS CLARIFICATION: las preguntas de «001 · Pedido de firma» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]
-
 ### Key Entities *(include if feature involves data)*
 
-- **Pedido de firma**: el documento, el remitente, el estudio, el estado, el orden de firma,
+- **Pedido de firma**: el documento, el solicitante, el estudio, el estado, el orden de firma,
   el vencimiento, los recordatorios, el mensaje y, si es un reenvío, el pedido del que salió.
 - **Documento**: el archivo original, el PDF que se firma, su huella, sus páginas y, al
   terminar, el PDF firmado y su huella.
@@ -326,7 +345,7 @@ tiene una norma identificada: es una pregunta abierta.
 
 ### Measurable Outcomes
 
-- **SC-001**: Un remitente que nunca usó el producto prepara y envía un pedido de un PDF con
+- **SC-001**: Un solicitante que nunca usó el producto prepara y envía un pedido de un PDF con
   dos firmantes en menos de 3 minutos.
 - **SC-002**: Un firmante sin cuenta firma con firma electrónica desde el celular en menos de
   2 minutos desde que abre el mensaje.
@@ -336,19 +355,21 @@ tiene una norma identificada: es una pregunta abierta.
 
 ## Assumptions
 
-Supuestos para lo que Carlos no definió. Al aprobar la especificación, Carlos los aprueba o
-los cambia.
+Carlos aprobó estos supuestos el 2026-10-15 (decisión 29), salvo el último, que es nuevo.
 
 - Los tipos de campo son: firma, iniciales, nombre, fecha de firma y texto libre, como en
   DocuSign.
 - Con firma electrónica, el firmante, además de apretar el botón, ve su nombre escrito como
   firma en el documento; no la dibuja.
-- Los recordatorios automáticos salen cada tres días, y el remitente puede cambiarlo o
+- Los recordatorios automáticos salen cada tres días, y el solicitante puede cambiarlo o
   apagarlos en cada pedido.
-- El remitente recibe un aviso cuando se completa, se rechaza o vence un pedido; no uno por
+- El solicitante recibe un aviso cuando se completa, se rechaza o vence un pedido; no uno por
   cada firma.
 - El documento firmado y la constancia llegan como enlace de descarga en el mensaje, no como
   adjunto.
 - Un firmante no puede delegar la firma en otra persona.
-- El remitente con cuenta pertenece a un estudio; las cuentas, el ingreso y los permisos
-  están en la capacidad 007.
+- El solicitante con cuenta pertenece a un estudio; las cuentas y el ingreso están en la
+  capacidad 007.
+- *Nuevo, a aprobar:* los documentos firmados y las constancias se guardan mientras exista la
+  cuenta del estudio, y el estudio los puede descargar en cualquier momento. Si la ley exige
+  un plazo, es la pregunta abierta sobre conservación.

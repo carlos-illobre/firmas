@@ -8,7 +8,7 @@
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
-**Input**: Decisión 18 de Carlos (2026-10-15): la primera versión tiene todas las pantallas
+**Input**: Decisiones 18, 30 y 31 de Carlos (2026-10-15): la primera versión tiene todas las pantallas
 de las maquetas. Esta capacidad cubre Inicio, la lista de documentos y el detalle de un
 documento de la maqueta de Lovable. Se apoya en los pedidos de firma de la capacidad 001.
 
@@ -83,6 +83,11 @@ comprobar los estados y la línea de tiempo.
    de aparecer en «Todos» y aparece en «Archivados».
 3. **E10** **Given** un documento completado, **When** aprieta «Descargar», **Then** baja el
    documento firmado y la constancia.
+4. **E11** **Given** un pedido con dos firmantes, de los que uno ya firmó, **When** el
+   solicitante abre el editor y mueve el campo del otro, **Then** el cambio se guarda, el
+   otro recibe el pedido de nuevo, y los campos del que ya firmó no se pueden mover.
+5. **E12** **Given** un documento sin cliente, **When** se lo ve en la lista, **Then** la
+   columna del cliente queda vacía y el filtro por cliente no lo muestra.
 
 ### Edge Cases
 
@@ -109,11 +114,15 @@ comprobar los estados y la línea de tiempo.
 - **RF-37**: El detalle de un documento muestra el nombre, el estado, el tipo, el cliente,
   el responsable, la vista previa paginada, los participantes con su estado, la próxima
   acción con su fecha límite y la línea de tiempo de eventos de la capacidad 001.
-- **RF-38**: Desde el detalle se puede recordar, descargar, archivar y cancelar el proceso de
-  firma.
+- **RF-38**: Desde el detalle se puede recordar, descargar, archivar, cancelar el proceso de
+  firma y abrir el editor.
+- **RF-38a**: El editor cambia todo lo referente a la firma de un pedido: los destinatarios,
+  el orden, el canal, la identidad, la posición de la firma y los campos, y el vencimiento
+  (decisión 30). Lo de un firmante que ya firmó no se puede cambiar, y cada firmante afectado
+  por un cambio recibe el pedido de nuevo.
 - **RF-39**: Un documento se puede archivar y desarchivar; archivado no aparece en «Todos».
-- **RF-40**: Cada documento tiene un cliente, un responsable del estudio y etiquetas
-  opcionales.
+- **RF-40**: Cada documento tiene uno o más firmantes y un responsable del estudio; el
+  cliente y las etiquetas son opcionales (decisión 31).
 - **RNF-05**: Inicio, la lista y el detalle se usan completos en el celular y en la
   computadora.
 
@@ -132,11 +141,10 @@ comprobar los estados y la línea de tiempo.
 
 ## Assumptions
 
+Supuestos a aprobar:
+
 - «Demorado» es un pedido que vence en los próximos tres días sin estar completo.
+- Lo de un firmante que ya firmó no se cambia en el editor, porque su firma quedó hecha sobre
+  esa versión del documento.
 - La próxima acción se deduce del estado: esperar la firma de alguien, revisar, reenviar,
   completar destinatarios o ninguna.
-
-## Preguntas
-
-- [NEEDS CLARIFICATION: las preguntas de «002 · Inicio y documentos» en
-  [preguntas-abiertas.md](../preguntas-abiertas.md)]
