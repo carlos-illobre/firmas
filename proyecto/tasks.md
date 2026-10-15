@@ -19,9 +19,9 @@ terminarla se marca `[x]`; no se borra.
 - [ ] T002 [carlos] [alta] [definir] Contestar las preguntas abiertas (estimación 2h)
   Están en specs/preguntas-abiertas.md. Se pueden contestar en una sesión de este repositorio,
   que las anota en docs/decisiones-de-negocio.md.
-- [ ] T003 [agente] [alta] [en curso] Especificar la primera capacidad: paso 1, con /speckit-specify y /speckit-clarify (depende de T002)
-- [ ] T004 [carlos] [alta] Aprobar la especificación de la primera capacidad (depende de T003)
-- [ ] T005 [agente] Maquetas de la primera capacidad: paso 2, con /ux (depende de T004)
+- [x] T003 [agente] [alta] Especificar la primera capacidad: paso 1, con /speckit-specify y /speckit-clarify (depende de T002)
+- [x] T004 [carlos] [alta] Aprobar la especificación de la primera capacidad (depende de T003)
+- [ ] T005 [agente] [en curso] Maquetas de la primera capacidad: paso 2, con /ux (depende de T004)
 - [ ] T006 [carlos] Elegir y aprobar las maquetas (depende de T005)
 - [ ] T007 [agente] Arquitectura: stack, alojamiento y proveedores de firma e identidad, con un ADR cada uno (depende de T004)
 - [ ] T008 [carlos] Crear el entorno de la nube `firmas` (depende de T007)
@@ -31,9 +31,9 @@ terminarla se marca `[x]`; no se borra.
   La red de la sesión rechaza lovable.dev y figma.site. Opciones: agregar esos dominios al
   entorno, conectar el proyecto de Lovable a un repositorio de GitHub, pasar el enlace
   figma.com del archivo de Figma, o subir capturas de cada pantalla.
-- [ ] T011 [agente] [en curso] Especificar las capacidades 002 a 007: paso 1 (depende de T002)
+- [x] T011 [agente] Especificar las capacidades 002 a 007: paso 1 (depende de T002)
   Inicio y documentos, plantillas, contactos, tareas, actividad y configuración.
-- [ ] T012 [carlos] Aprobar las especificaciones de las capacidades 002 a 007 (depende de T011)
+- [x] T012 [carlos] Aprobar las especificaciones de las capacidades 002 a 007 (depende de T011)
 - [x] T013 [carlos] [alta] Habilitar una fuente oficial de normas en el entorno (estimación 15m)
   Para verificar la ley 25.506 y las demás antes de aprobar la 001: infoleg.gob.ar o
   argentina.gob.ar.

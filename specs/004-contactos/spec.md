@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-15
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (2026-10-15)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
@@ -74,7 +74,7 @@ pedido y ver el documento asociado.
 
 ## Assumptions
 
-Supuestos a aprobar:
+Supuestos aprobados por Carlos el 2026-10-15 (decisión 39):
 
 - El DNI se guarda porque lo usa la validación contra RENAPER, y el CUIT o CUIL porque
   identifica a quien firma por una organización.

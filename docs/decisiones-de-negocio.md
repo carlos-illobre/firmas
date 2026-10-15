@@ -88,3 +88,8 @@ Lo que todavía no está decidido está en
     No hay roles dentro del estudio.
 37. **Conexiones con otros servicios.** Solo las mínimas necesarias para que funcione.
 38. **Registro.** Libre: cualquiera crea una cuenta.
+39. **Especificaciones aprobadas.** Las siete especificaciones (001 a 007), con sus
+    supuestos: el editor no cambia lo de quien ya firmó, los documentos y las constancias se
+    guardan mientras exista la cuenta, se entra con correo y contraseña con un segundo factor
+    opcional, las plantillas son de todo el estudio y «demorado» es lo que vence en tres días
+    sin completarse. Los roles se llaman solicitante y firmante.

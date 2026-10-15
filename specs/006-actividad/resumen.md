@@ -20,6 +20,6 @@ Todos los eventos del estudio, filtrables y exportables. Detalle en [spec.md](sp
 
 18, 23 y 35 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
-## Lo que frena la aprobación
+## Estado de la especificación
 
-Nada: espera la aprobación de Carlos, con sus supuestos.
+Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39).

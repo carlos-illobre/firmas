@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-15
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (2026-10-15)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
@@ -355,7 +355,7 @@ tiene una norma identificada: es una pregunta abierta.
 
 ## Assumptions
 
-Carlos aprobó estos supuestos el 2026-10-15 (decisión 29), salvo el último, que es nuevo.
+Carlos aprobó estos supuestos el 2026-10-15 (decisiones 29 y 39).
 
 - Los tipos de campo son: firma, iniciales, nombre, fecha de firma y texto libre, como en
   DocuSign.
@@ -370,6 +370,6 @@ Carlos aprobó estos supuestos el 2026-10-15 (decisión 29), salvo el último, q
 - Un firmante no puede delegar la firma en otra persona.
 - El solicitante con cuenta pertenece a un estudio; las cuentas y el ingreso están en la
   capacidad 007.
-- *Nuevo, a aprobar:* los documentos firmados y las constancias se guardan mientras exista la
+- Los documentos firmados y las constancias se guardan mientras exista la
   cuenta del estudio, y el estudio los puede descargar en cualquier momento. Si la ley exige
   un plazo, es la pregunta abierta sobre conservación.

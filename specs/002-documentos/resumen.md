@@ -31,6 +31,6 @@ Inicio ordena el trabajo del día; la lista y el detalle siguen cada pedido de l
 
 18, 30 y 31 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
-## Lo que frena la aprobación
+## Estado de la especificación
 
-Nada: espera la aprobación de Carlos, con sus supuestos.
+Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39).

@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-15
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (2026-10-15)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
@@ -141,7 +141,7 @@ comprobar los estados y la línea de tiempo.
 
 ## Assumptions
 
-Supuestos a aprobar:
+Supuestos aprobados por Carlos el 2026-10-15 (decisión 39):
 
 - «Demorado» es un pedido que vence en los próximos tres días sin estar completo.
 - Lo de un firmante que ya firmó no se cambia en el editor, porque su firma quedó hecha sobre

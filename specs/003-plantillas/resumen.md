@@ -23,6 +23,6 @@ Las plantillas del estudio y la redacción desde cero, dos de las tres formas de
 
 11, 18 y 32 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
-## Lo que frena la aprobación
+## Estado de la especificación
 
-Nada: espera la aprobación de Carlos, con sus supuestos.
+Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39).

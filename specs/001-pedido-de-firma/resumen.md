@@ -58,7 +58,6 @@ al terminar quedan el documento firmado y la constancia. Detalle en [spec.md](sp
 
 5, 7, 8, 11 a 17, 19 a 29 y 36 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
-## Lo que frena la aprobación
+## Estado de la especificación
 
-Nada: espera la aprobación de Carlos. Un supuesto nuevo, sobre cuánto se guardan los
-documentos, está marcado en la especificación.
+Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39).

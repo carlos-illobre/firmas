@@ -20,6 +20,6 @@ Tareas del estudio, en lista o calendario, vinculadas a documentos y clientes. D
 
 18 y 34 de [decisiones-de-negocio.md](../../docs/decisiones-de-negocio.md).
 
-## Lo que frena la aprobación
+## Estado de la especificación
 
-Nada: espera la aprobación de Carlos, con sus supuestos.
+Aprobada por Carlos el 2026-10-15, con sus supuestos (decisión 39).

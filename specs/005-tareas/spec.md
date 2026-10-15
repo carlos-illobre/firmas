@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-15
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (2026-10-15)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 

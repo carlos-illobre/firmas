@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-15
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (2026-10-15)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
@@ -114,7 +114,7 @@ que el PDF que se firma tiene ese texto.
 
 ## Assumptions
 
-Supuestos a aprobar:
+Supuestos aprobados por Carlos el 2026-10-15 (decisión 39):
 
 - El texto de los modelos base se escribe antes de lanzar, y lo valida un abogado (riesgo
   R-01).

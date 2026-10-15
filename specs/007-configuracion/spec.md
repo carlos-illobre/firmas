@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-15
 
-**Status**: Borrador  <!-- pasa a «Aprobada» cuando Carlos aprueba la especificación -->
+**Status**: Aprobada (2026-10-15)
 
 **Maquetas**: Pendientes  <!-- «Aprobadas» cuando Carlos elige, o «No lleva pantallas» -->
 
@@ -109,7 +109,7 @@ nuevo los trae.
 
 ## Assumptions
 
-Supuestos a aprobar:
+Supuestos aprobados por Carlos el 2026-10-15 (decisión 39):
 
 - Se entra con correo y contraseña, y se puede activar un segundo factor por código.
 - Un usuario pertenece a un solo estudio. Quien se registra sin invitación crea un estudio
