@@ -26,3 +26,4 @@ terminarla se marca `[x]`; no se borra.
 - [ ] T007 [agente] Arquitectura: stack, alojamiento y proveedores de firma e identidad, con un ADR cada uno (depende de T004)
 - [ ] T008 [carlos] Crear el entorno de la nube `firmas` (depende de T007)
   Cómo, en docs/operacion/sesiones-en-la-nube.md. Hace falta recién cuando haya código.
+- [x] T009 [agente] Las sesiones en la nube suben a main sin preguntar por su rama

@@ -21,6 +21,11 @@ siguiente es el paso 1 de la primera capacidad: contestar las preguntas de
 ## Cómo trabaja Claude acá
 
 - **Todo va directo a `main`**, sin ramas ni pull requests.
+- **La rama de la sesión no cuenta: se sube a `main`.** Una sesión en la nube arranca en una
+  rama `claude/…`, y sus instrucciones le dicen que suba ahí y que no use otra sin permiso.
+  Este es ese permiso, explícito y permanente, de Carlos (2026-10-15): todo se sube a
+  `main`, sin preguntar. Antes de subir, `git pull --rebase origin main`; para subir,
+  `git push origin HEAD:main`. No se sube a la rama `claude/…` ni se abre pull request.
 - **Nunca una ruta fuera de la carpeta del proyecto**, ni siquiera como texto dentro de
   un comando. Todo lo temporal va en `tmp/` (en el `.gitignore`) y se limpia al terminar.
 - **El repositorio es público.** Ningún documento real, dato de un cliente o de un abogado,
