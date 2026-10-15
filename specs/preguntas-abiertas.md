@@ -12,53 +12,50 @@ pregunta, no reglas: la regla se escribe con la norma verificada (constitución,
 
 ## El valor de la firma
 
-1. ¿Qué firma ofrece el producto: **firma electrónica** (la que vale como prueba, pero
-   quien la invoca tiene que probar que es válida, ley 25.506, art. 5), **firma digital**
-   (con certificado de un certificador licenciado, que el Código Civil y Comercial, art.
-   288, equipara a la firma de puño y letra), o las dos según el documento?
-2. Si hay firma digital: ¿el producto se integra con certificadores licenciados (por
-   ejemplo, la Plataforma de Firma Digital Remota del Estado), pide ser uno, o el abogado
-   firma con el token o certificado que ya tiene?
-3. ¿Hay documentos que el producto no debe aceptar porque la ley exige otra forma (por
+Decidido: quien tiene certificado de firma digital lo ingresa y firma con él; quien no,
+firma con firma electrónica (decisión 5).
+
+1. Para la firma digital: ¿el certificado se ingresa como archivo, se usa con el token del
+   firmante o se conecta con la Plataforma de Firma Digital Remota? ¿Se aceptan los tres?
+2. ¿Hay documentos que el producto no debe aceptar porque la ley exige otra forma (por
    ejemplo, los que requieren escritura pública)? ¿Se avisa o se bloquea?
 
 ## Para quién y para qué
 
-4. ¿Quién es el cliente que paga: el abogado independiente, el estudio, o los dos?
-5. ¿Quiénes firman: el abogado, su cliente, la contraparte, testigos? ¿Los que no son
-   abogados necesitan cuenta?
-6. ¿Qué documentos se firman primero? Por ejemplo: contratos, convenios de honorarios,
-   acuerdos de mediación, cartas poder, escritos judiciales. ¿Cuál es el más importante
-   para empezar?
-7. ¿Se firman escritos para presentar en un expediente judicial electrónico (PJN, SCBA u
+3. Los firmantes que no son abogados, ¿necesitan cuenta o firman desde un enlace?
+4. ¿Se firman escritos para presentar en un expediente judicial electrónico (PJN, SCBA u
    otras jurisdicciones)? ¿Se integra con esos sistemas o el abogado sube el documento él?
-8. ¿Qué tiene que tener que no tenga DocuSign para que un abogado argentino lo elija?
+5. ¿Qué tiene que tener que no tenga DocuSign para que un abogado argentino lo elija, además
+   de ser más lindo y más usable?
 
 ## Identidad y prueba
 
-9. ¿Cómo se comprueba quién firma: correo, código por SMS o WhatsApp, foto del DNI,
-   validación contra RENAPER, o depende del documento?
-10. ¿Qué tiene que decir la constancia de lo que pasó (quién, cuándo, desde dónde, qué
-    versión del documento) y para qué se usa: para presentarla en un juicio?
-11. ¿Cuánto tiempo se guardan los documentos firmados y las constancias, y quién puede
-    pedirlos después?
+6. ¿Cómo se comprueba quién firma con firma electrónica: correo, código por SMS o WhatsApp,
+   foto del DNI, validación contra RENAPER, o depende del documento?
+7. ¿Qué tiene que decir la constancia de lo que pasó (quién, cuándo, desde dónde, qué
+   versión del documento) y para qué se usa: para presentarla en un juicio?
+8. ¿Cuánto tiempo se guardan los documentos firmados y las constancias, y quién puede
+   pedirlos después?
 
 ## Recorrido
 
-12. ¿El documento se sube armado (PDF) o el producto también ayuda a redactarlo, con
-    modelos?
-13. ¿Hay orden de firma (uno después del otro) o todos firman a la vez?
-14. ¿Cómo le llega el pedido de firma a cada uno: correo, WhatsApp, un enlace?
-15. ¿Qué pasa si alguien rechaza firmar, o el pedido vence?
+9. Además de adjuntar el archivo, ¿el producto ayuda a redactar el documento, con modelos?
+   ¿Qué formatos se aceptan: solo PDF, o también Word?
+10. ¿Hay orden de firma (uno después del otro) o todos firman a la vez?
+11. ¿Cómo le llega el pedido de firma a cada uno: correo, WhatsApp, un enlace?
+12. ¿Qué pasa si alguien rechaza firmar, o el pedido vence?
 
 ## Negocio
 
-16. ¿Cómo se cobra: por documento, por mes, por usuario? ¿En pesos? ¿Con factura
-    electrónica?
-17. ¿Hay un plan gratis?
-18. ¿El nombre del producto es «Firmas» o es solo el del repositorio?
-19. ¿Hay un primer estudio o abogado que lo pruebe? ¿Quién valida que lo jurídico está bien?
+Decidido: por ahora nadie paga (decisión 6).
+
+13. Cuando se cobre, ¿cómo: por documento, por mes, por usuario? ¿En pesos? ¿Con factura
+    electrónica? ¿Hay un plan gratis?
+14. ¿El nombre del producto es «Firmas» o es solo el del repositorio?
+15. ¿Hay un primer estudio o abogado que lo pruebe? ¿Quién valida que lo jurídico está bien?
 
 ## Fechas
 
-20. ¿Para cuándo querés la primera versión, y qué tiene que tener como mínimo?
+Decidido: no hay fecha límite (decisión 9).
+
+16. ¿Qué tiene que tener como mínimo la primera versión?

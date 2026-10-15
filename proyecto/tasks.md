@@ -27,3 +27,7 @@ terminarla se marca `[x]`; no se borra.
 - [ ] T008 [carlos] Crear el entorno de la nube `firmas` (depende de T007)
   Cómo, en docs/operacion/sesiones-en-la-nube.md. Hace falta recién cuando haya código.
 - [x] T009 [agente] Las sesiones en la nube suben a main sin preguntar por su rama
+- [ ] T010 [carlos] [alta] Dar acceso a la maqueta de Lovable y al diseño de Figma (estimación 15m)
+  La red de la sesión rechaza lovable.dev y figma.site. Opciones: agregar esos dominios al
+  entorno, conectar el proyecto de Lovable a un repositorio de GitHub, pasar el enlace
+  figma.com del archivo de Figma, o subir capturas de cada pantalla.

@@ -5,12 +5,16 @@ Lo que Carlos dijo del producto, sin agregarle nada. Lo que falta está en
 
 ## Qué es
 
-Un producto como DocuSign: se sube un documento, se piden las firmas y queda firmado.
+Un producto como DocuSign: se adjunta un documento, se cargan los datos de los firmantes,
+se piden las firmas y queda firmado. Sirve para cualquier documento. Quien tiene
+certificado de firma digital firma con él; quien no, con firma electrónica.
 
 ## Para quién
 
-Para el mercado argentino, con foco en abogados.
+Para el mercado argentino, con foco en abogados. Los firmantes no son necesariamente
+abogados. Por ahora nadie paga.
 
 ## Por qué
 
-Todavía sin escribir: sale de las preguntas 4 a 8.
+Un clon de DocuSign, pero más lindo y más usable. Qué más lo diferencia es la pregunta 5 de
+[specs/preguntas-abiertas.md](../specs/preguntas-abiertas.md).
